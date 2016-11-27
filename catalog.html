@@ -9,72 +9,68 @@
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a href="index.html">
-          <img src="http://placehold.it/100x50" width="100" height="50">
+        <a href="index.html" class="page-header__logo-link">
+          <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
         </a>
       </div>
       <nav class="menu-list menu-list--close">
         <button class="menu-list__switch">Меню</button>
-        <div class="menu-list__container">
-          <ul class="menu-list_items">
-            <li class="menu-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="menu-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="menu-list__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="menu-list__item">
-              <a href="#">Корзина: пока пусто</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="menu-list__items">
+          <li class="menu-list__item">
+            <a href="catalog.html" class="menu-list__link">Каталог товаров</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="form.html" class="menu-list__link">Вязание на заказ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link menu-list__link--search">Поиск по сайту</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пусто</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main class="page-main-catalog">
-      <div class="page-main-catalog__header">
-        <h1>Каталог товаров</h1>
-      </div>
+    <main class="page-main-inner">
+      <h1 class="page-main-inner__title">Каталог товаров</h1>
       <div class="products">
-        <article class="products__item">
-          <a href="#">
-            <img src="http://placehold.it/260x195" class="products__image" width="260" height="195">
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#">
-            <h3 class="products__title">Зайчик-попрыгайчик</h3>
+          <a href="#" class="product__title-link">
+            <h3 class="product__title">Зайчик-попрыгайчик</h3>
           </a>
-          <p class="products__description">Рост 30 см, вес 200 г</p>
-          <span class="products__price">1 200 руб.</span>
-          <a class="products__add-basket" href="#">Добавить в корзину</a>
+          <p class="product__description">Рост 30 см, вес 200 г</p>
+          <span class="product__price">1 200 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
         </article>
-        <article class="products__item">
-          <a href="#">
-            <img src="http://placehold.it/260x195" class="products__image" width="260" height="195">
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#">
-            <h3 class="products__title">Корзинка для белья</h3>
+          <a href="#" class="product__title-link">
+            <h3 class="product__title">Корзинка для белья</h3>
           </a>
-          <p class="products__description">Диаметр 15 см, высота 10 см</p>
-          <span class="products__price">690 руб.</span>
-          <a class="products__add-basket" href="#">Добавить в корзину</a>
+          <p class="product__description">Диаметр 15 см, высота 10 см</p>
+          <span class="product__price">690 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
         </article>
-        <article class="products__item">
-          <a href="#">
-            <img src="http://placehold.it/260x195" class="products__image" width="260" height="195">
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#">
-            <h3 class="products__title">Большая корзинка для игрушек</h3>
+          <a href="#" class="product__title-link">
+            <h3 class="product__title">Большая корзинка для игрушек</h3>
           </a>
-          <p class="products__description">Диаметр 30 см, высота 30 см</p>
-          <span class="products__price">1 500 руб.</span>
-          <a class="products__add-basket" href="#">Добавить в корзину</a>
+          <p class="product__description">Диаметр 30 см, высота 30 см</p>
+          <span class="product__price">1 500 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
         </article>
         <article class="make-process">
           <h3 class="make-process__title">Процесс производства</h3>
-          <img  src="http://placehold.it/260x150" class="products__image" class="make-process__image" width="260" height="150">
+          <img  src="http://placehold.it/260x150" class="make-process__image" width="260" height="150">
           <p class="make-process__description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются
               наши товары.
@@ -91,8 +87,8 @@
         <a href="#" class="social social--tw">Twitter</a>
       </div>
       <div class="main-footer__maker">
-        <span>Разработано</span>
-        <a href="#">HTMLAcademy</a>
+        <span class="main-footer__maker-text">Разработано</span>
+        <a href="#" class="main-footer__maker-link">HTMLAcademy</a>
       </div>
     </footer>
 
