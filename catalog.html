@@ -39,9 +39,9 @@
           <a href="#" class="product__link">
             <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#" class="product__title-link">
-            <h3 class="product__title">Зайчик-попрыгайчик</h3>
-          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Зайчик-попрыгайчик</a>
+          </h3>
           <p class="product__description">Рост 30 см, вес 200 г</p>
           <span class="product__price">1 200 руб.</span>
           <a class="product__add-basket" href="#">Добавить в корзину</a>
@@ -50,9 +50,9 @@
           <a href="#" class="product__link">
             <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#" class="product__title-link">
-            <h3 class="product__title">Корзинка для белья</h3>
-          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Корзинка для белья</a>
+          </h3>
           <p class="product__description">Диаметр 15 см, высота 10 см</p>
           <span class="product__price">690 руб.</span>
           <a class="product__add-basket" href="#">Добавить в корзину</a>
@@ -61,9 +61,9 @@
           <a href="#" class="product__link">
             <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
           </a>
-          <a href="#" class="product__title-link">
-            <h3 class="product__title">Большая корзинка для игрушек</h3>
-          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Большая корзинка для игрушек</a>
+          </h3>
           <p class="product__description">Диаметр 30 см, высота 30 см</p>
           <span class="product__price">1 500 руб.</span>
           <a class="product__add-basket" href="#">Добавить в корзину</a>
@@ -79,6 +79,22 @@
         </article>
       </div>
     </main>
+
+    <div class="basket-modal">
+      <h2 class="basket-modal__title">Добавить в корзину</h2>
+      <p class="basket-modal__text">Выберите размер:</p>
+      <form action="/echo" method="post" class="basket-modal__form">
+
+        <label for="small" class="basket-modal__label-size">S</label>
+        <input type="radio" name="size" id="small" class="hidden" value="small" checked>
+        <label for="medium" class="basket-modal__label-size">M</label>
+        <input type="radio" name="size" id="medium" class="hidden" value="medium">
+        <label for="large" class="basket-modal__label-size">L</label>
+        <input type="radio" name="size" id="large" class="hidden" value="large">
+
+        <input type="submit" class="btn btn--basket" value="Добавить">
+      </form>
+    </div>
 
     <footer class="main-footer">
       <div class="main-footer__social">
