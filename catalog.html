@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка - Каталог</title>
+  </head>
+
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__logo">
+        <a href="index.html" class="page-header__logo-link">
+          <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
+        </a>
+      </div>
+      <nav class="menu-list menu-list--close">
+        <button class="menu-list__switch">Меню</button>
+        <ul class="menu-list__items">
+          <li class="menu-list__item">
+            <a href="catalog.html" class="menu-list__link">Каталог товаров</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="form.html" class="menu-list__link">Вязание на заказ</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link menu-list__link--search">Поиск по сайту</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пусто</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main-inner">
+      <h1 class="page-main-inner__title">Каталог товаров</h1>
+      <div class="products">
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Зайчик-попрыгайчик</a>
+          </h3>
+          <p class="product__description">Рост 30 см, вес 200 г</p>
+          <span class="product__price">1 200 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
+        </article>
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Корзинка для белья</a>
+          </h3>
+          <p class="product__description">Диаметр 15 см, высота 10 см</p>
+          <span class="product__price">690 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
+        </article>
+        <article class="product">
+          <a href="#" class="product__link">
+            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+          </a>
+          <h3 class="product__title">
+            <a href="#" class="product__title-link">Большая корзинка для игрушек</a>
+          </h3>
+          <p class="product__description">Диаметр 30 см, высота 30 см</p>
+          <span class="product__price">1 500 руб.</span>
+          <a class="product__add-basket" href="#">Добавить в корзину</a>
+        </article>
+        <article class="make-process">
+          <h3 class="make-process__title">Процесс производства</h3>
+          <img  src="http://placehold.it/260x150" class="make-process__image" width="260" height="150">
+          <p class="make-process__description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются
+              наши товары.
+          </p>
+          <a href="#" class="btn">Сделать заказ</a>
+        </article>
+      </div>
+    </main>
+
+    <div class="basket-modal">
+      <h2 class="basket-modal__title">Добавить в корзину</h2>
+      <p class="basket-modal__text">Выберите размер:</p>
+      <form action="/echo" method="post" class="basket-modal__form">
+
+        <label for="small" class="basket-modal__label-size">S</label>
+        <input type="radio" name="size" id="small" class="hidden" value="small" checked>
+        <label for="medium" class="basket-modal__label-size">M</label>
+        <input type="radio" name="size" id="medium" class="hidden" value="medium">
+        <label for="large" class="basket-modal__label-size">L</label>
+        <input type="radio" name="size" id="large" class="hidden" value="large">
+
+        <input type="submit" class="btn btn--basket" value="Добавить">
+      </form>
+    </div>
+
+    <footer class="main-footer">
+      <div class="main-footer__social">
+        <a href="#" class="social social--inst">Instagram</a>
+        <a href="#" class="social social--fb">Facebook</a>
+        <a href="#" class="social social--tw">Twitter</a>
+      </div>
+      <div class="main-footer__maker">
+        <span class="main-footer__maker-text">Разработано</span>
+        <a href="#" class="main-footer__maker-link">HTMLAcademy</a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
