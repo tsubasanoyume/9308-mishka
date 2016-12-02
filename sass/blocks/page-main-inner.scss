@@ -1,0 +1,8 @@
+.page-main-inner__title {
+  @include font-style(27px, 30px);
+
+  padding: 70px 30px;
+  margin: 0;
+
+  background: $bg-color-grey;
+}

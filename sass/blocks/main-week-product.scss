@@ -1,0 +1,28 @@
+.main-week-product {
+  padding-bottom: 30px;
+
+  border-bottom: 2px solid $bg-color-grey;
+}
+
+.main-week-product__title {
+  @include font-style(25px, 30px);
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.main-week-product__mark {
+  @include font-style(17px, 16px);
+
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.main-week-product__price {
+  @include font-style();
+
+  display: block;
+}
+
+.main-week-product__image-container {
+  margin: 0;
+}

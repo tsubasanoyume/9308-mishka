@@ -1,0 +1,10 @@
+.menu-list__items {
+  @include list-style();
+}
+
+.menu-list__link {
+  @include link-style();
+  @include font-style();
+
+  display: block;
+}

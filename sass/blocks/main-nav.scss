@@ -1,0 +1,21 @@
+.main-nav__list {
+  @include list-style();
+}
+
+.main-nav__list-link {
+  @include link-style();
+  @include font-style(19px, 24px);
+
+  display: block;
+  padding: 30px;
+
+  color: #fff;
+}
+
+.main-nav__list-link--interior {
+  background: #63d1bb;
+}
+
+.main-nav__list-link--toys {
+  background: #56c3b2;
+}

@@ -1,0 +1,18 @@
+.main-contacts {
+  padding-bottom: 40px;
+}
+
+.main-contacts__title {
+  @include font-style(18px, 30px);
+}
+
+.main-contacts__list {
+  margin-bottom: 40px;
+}
+
+.main-contacts__map {
+  height: 455px;
+  margin-bottom: 40px;
+
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
+}
