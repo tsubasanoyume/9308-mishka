@@ -1,0 +1,11 @@
+.main-about-us {
+  margin-bottom: 40px;
+}
+
+.main-about-us__title {
+  @include font-style(25px, 30px);
+}
+
+.features-list {
+  list-style: none;
+}

@@ -1,0 +1,9 @@
+.btn {
+  @include font-style(17px, 16px);
+
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: block;
+}

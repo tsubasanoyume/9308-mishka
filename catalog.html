@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Каталог</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
 
-    <header class="page-header">
+    <header class="page-header wrap">
       <div class="page-header__logo">
         <a href="index.html" class="page-header__logo-link">
           <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
@@ -34,48 +35,56 @@
 
     <main class="page-main-inner">
       <h1 class="page-main-inner__title">Каталог товаров</h1>
-      <div class="products">
+      <div class="products wrap">
         <article class="product">
           <a href="#" class="product__link">
-            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+            <img src="img/photo-1-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
-          <h3 class="product__title">
-            <a href="#" class="product__title-link">Зайчик-попрыгайчик</a>
-          </h3>
-          <p class="product__description">Рост 30 см, вес 200 г</p>
-          <span class="product__price">1 200 руб.</span>
-          <a class="product__add-basket" href="#">Добавить в корзину</a>
+          <div class="product__text">
+            <h3 class="product__title">
+              <a href="#" class="product__title-link">Зайчик-попрыгайчик</a>
+            </h3>
+            <p class="product__description">Рост 30 см, вес 200 г</p>
+            <span class="product__price">1 200 руб.</span>
+            <a class="product__add-basket" href="#">Добавить в корзину</a>
+          </div>
         </article>
         <article class="product">
           <a href="#" class="product__link">
-            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+            <img src="img/photo-2-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
-          <h3 class="product__title">
-            <a href="#" class="product__title-link">Корзинка для белья</a>
-          </h3>
-          <p class="product__description">Диаметр 15 см, высота 10 см</p>
-          <span class="product__price">690 руб.</span>
-          <a class="product__add-basket" href="#">Добавить в корзину</a>
+          <div class="product__text">
+            <h3 class="product__title">
+              <a href="#" class="product__title-link">Корзинка для белья</a>
+            </h3>
+            <p class="product__description">Диаметр 15 см, высота 10 см</p>
+            <span class="product__price">690 руб.</span>
+            <a class="product__add-basket" href="#">Добавить в корзину</a>
+          </div>
         </article>
         <article class="product">
           <a href="#" class="product__link">
-            <img src="http://placehold.it/260x195" class="product__image" width="260" height="195">
+            <img src="img/photo-3-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
-          <h3 class="product__title">
-            <a href="#" class="product__title-link">Большая корзинка для игрушек</a>
-          </h3>
-          <p class="product__description">Диаметр 30 см, высота 30 см</p>
-          <span class="product__price">1 500 руб.</span>
-          <a class="product__add-basket" href="#">Добавить в корзину</a>
+          <div class="product__text">
+            <h3 class="product__title">
+              <a href="#" class="product__title-link">Большая корзинка для игрушек</a>
+            </h3>
+            <p class="product__description">Диаметр 30 см, высота 30 см</p>
+            <span class="product__price">1 500 руб.</span>
+            <a class="product__add-basket" href="#">Добавить в корзину</a>
+          </div>
         </article>
         <article class="make-process">
           <h3 class="make-process__title">Процесс производства</h3>
-          <img  src="http://placehold.it/260x150" class="make-process__image" width="260" height="150">
-          <p class="make-process__description">
+          <img  src="img/video-mobile@1x.jpg" class="make-process__image" width="260" height="150">
+          <div class="make-process__text">
+            <p class="make-process__description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются
               наши товары.
-          </p>
-          <a href="#" class="btn">Сделать заказ</a>
+            </p>
+            <a href="#" class="btn">Сделать заказ</a>
+          </div>
         </article>
       </div>
     </main>
@@ -96,15 +105,15 @@
       </form>
     </div>
 
-    <footer class="main-footer">
-      <div class="main-footer__social">
+    <footer class="page-footer">
+      <div class="page-footer__social">
         <a href="#" class="social social--inst">Instagram</a>
         <a href="#" class="social social--fb">Facebook</a>
         <a href="#" class="social social--tw">Twitter</a>
       </div>
-      <div class="main-footer__maker">
-        <span class="main-footer__maker-text">Разработано</span>
-        <a href="#" class="main-footer__maker-link">HTMLAcademy</a>
+      <div class="page-footer__maker">
+        <span class="page-footer__maker-text">Разработано</span>
+        <a href="#" class="page-footer__maker-link">HTMLAcademy</a>
       </div>
     </footer>
 

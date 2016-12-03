@@ -1,0 +1,29 @@
+.product {
+  width: 260px;
+  margin-bottom: 30px;
+
+
+  border: 2px solid $main-color-border;
+}
+
+.product__text {
+  padding: 0 28px 15px;
+}
+
+.product__title-link {
+  @include font-style();
+  @include link-style();
+}
+
+.product__description {
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.product__price {
+  @include font-style();
+}
+
+.product__add-basket {
+  font-size: 0;
+}

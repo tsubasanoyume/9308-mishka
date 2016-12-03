@@ -1,0 +1,39 @@
+.order-form {
+  padding: 30px;
+}
+
+.order-form__description {
+  font-size: 13px;
+  line-height: 24px;
+
+  margin: 0;
+}
+
+.order-form__title {
+  @include font-style(17px, 16px);
+
+  display: block;
+
+  color: $color-light-green;
+  text-transform: uppercase;
+
+  margin: 20px 0;
+}
+
+.order-form__type-checkbox {
+  @include font-style(17px, 18px);
+}
+
+.order-form__color-radio {
+  @include font-style(17px, 18px);
+}
+
+.order-form__text {
+  @include font-style(17px, 18px);
+}
+
+.order-form__note {
+  display: block;
+
+  margin-bottom: 30px;
+}

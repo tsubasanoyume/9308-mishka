@@ -1,0 +1,21 @@
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__list-link {
+  @include link-style();
+  @include font-style(19px, 24px);
+
+  display: block;
+  padding: 30px;
+
+  color: #fff;
+
+  &--interior {
+    background: $color-light-green;
+  }
+
+  &--toys {
+    background: $color-green;
+  }
+}
