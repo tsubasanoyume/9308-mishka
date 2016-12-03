@@ -1,8 +1,9 @@
 .main-header {
-  height: 285px;
+  height: 283px;
   padding: 45px 0;
 
   background: $bg-color-main-header url("../img/hero-mobile@1x.jpg") no-repeat;
+  background-position: 50% 0;
 }
 
 .main-header__title {
