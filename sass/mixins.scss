@@ -4,14 +4,8 @@
   color: #000;
 }
 
-@mixin list-style() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 @mixin font-style($font-size: 17px, $line-height: 24px) {
-  font-family: "OpenSans Bold", "New Times Roman", sans serif;
+  font-family: "OpenSans Bold", "Times New Roman", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
 }

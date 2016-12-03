@@ -1,5 +1,5 @@
 .menu-list__items {
-  @include list-style();
+  list-style: none;
 }
 
 .menu-list__link {

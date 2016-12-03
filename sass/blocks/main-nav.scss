@@ -1,5 +1,5 @@
 .main-nav__list {
-  @include list-style();
+  list-style: none;
 }
 
 .main-nav__list-link {
@@ -10,12 +10,12 @@
   padding: 30px;
 
   color: #fff;
-}
 
-.main-nav__list-link--interior {
-  background: #63d1bb;
-}
+  &--interior {
+    background: $color-light-green;
+  }
 
-.main-nav__list-link--toys {
-  background: #56c3b2;
+  &--toys {
+    background: $color-green;
+  }
 }

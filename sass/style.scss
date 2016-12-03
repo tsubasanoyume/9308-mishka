@@ -1,6 +1,10 @@
 @import "mixins.scss";
 @import "variables.scss";
 
+@import "global/fonts.scss";
+@import "global/btn.scss";
+@import "global/layout.scss";
+
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
 @import "blocks/page-main-inner.scss";
@@ -21,7 +25,3 @@
 @import "blocks/order-form.scss";
 @import "blocks/pagination.scss";
 @import "blocks/social.scss";
-
-@import "global/fonts.scss";
-@import "global/btn.scss";
-@import "global/layout.scss";

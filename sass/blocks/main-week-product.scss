@@ -1,7 +1,7 @@
 .main-week-product {
   padding-bottom: 30px;
 
-  border-bottom: 2px solid $bg-color-grey;
+  border-bottom: 2px solid $color-grey;
 }
 
 .main-week-product__title {
@@ -13,7 +13,7 @@
 .main-week-product__mark {
   @include font-style(17px, 16px);
 
-  color: #63d1bb;
+  color: $color-light-green;
   text-transform: uppercase;
 }
 

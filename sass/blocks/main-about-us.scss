@@ -7,5 +7,5 @@
 }
 
 .features-list {
-  @include list-style();
+  list-style: none;
 }
