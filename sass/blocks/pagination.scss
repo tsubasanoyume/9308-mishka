@@ -1,0 +1,38 @@
+.pagination {
+  font-size: 0;
+
+  margin-bottom: 40px;
+}
+
+.pagination__button {
+  display: inline-block;
+
+  height: 50px;
+
+  border: 1px solid $main-color-border;
+}
+
+.pagination__button--previous {
+  width: 130px;
+}
+
+.pagination__button--next {
+  width: 126px;
+}
+
+@media ($tablet-widths) {
+
+  .pagination {
+    position: absolute;
+
+    bottom: 80px;
+    right: 0;
+  }
+
+}
+
+@media ($desktop-widths) {
+  .pagination {
+    bottom: 130px;
+  }
+}
