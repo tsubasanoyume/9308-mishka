@@ -1,3 +1,9 @@
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
 .main-nav__list {
   list-style: none;
 }
@@ -7,7 +13,8 @@
   @include font-style(19px, 24px);
 
   display: block;
-  padding: 30px;
+  min-height: 53px;
+  padding: 25px;
 
   color: #fff;
 
@@ -18,4 +25,43 @@
   &--toys {
     background: $color-green;
   }
+}
+
+@media ($tablet-widths) {
+
+  .main-nav {
+    width: 668px;
+    padding: 0 50px;
+
+    margin-top: -100px;
+  }
+
+  .main-nav__list-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 334px;
+
+    margin-left: -4px;
+  }
+
+  .main-nav__list-link {
+    padding: 30px 35px;
+  }
+
+}
+
+@media ($desktop-widths) {
+
+  .main-nav {
+    width: 1050px;
+  }
+
+  .main-nav__list-item {
+    width: 525px;
+  }
+
+  .main-nav__list-link {
+    padding: 30px 35px;
+  }
+
 }

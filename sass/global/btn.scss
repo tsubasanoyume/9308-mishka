@@ -1,9 +1,76 @@
 .btn {
   @include font-style(17px, 16px);
 
-  color: #000;
+  color: $color-light-black;
   text-decoration: none;
   text-transform: uppercase;
 
   display: block;
+
+  border: 2px solid $color-light-black;
+  text-align: center;
+  padding: 17px 0;
+
+  &--basket {
+    background: $color-light-green;
+    border: 2px solid $color-light-green;
+    color: #fff;
+    width: 100%;
+  }
+
+  &--order {
+    @media ($tablet-widths) {
+      width: 288px;
+    }
+
+    @media ($desktop-widths) {
+      margin-left: 175px;
+    }
+  }
+
+  &--reviews {
+    @media ($tablet-widths) {
+      width: 172px;
+
+      position: absolute;
+      top: 0;
+      right: 50px;
+    }
+  }
+
+  &--write {
+    @media ($tablet-widths) {
+      width: 230px;
+
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    @media ($desktop-widths) {
+      margin-left: 175px;
+    }
+  }
+
+  &--make {
+    @media ($desktop-widths) {
+      width: 227px;
+      position: absolute;
+
+      bottom: 55px;
+      right: 58px;
+    }
+  }
+
+  &--send {
+    width: 100%;
+    background: #fff;
+
+    @media ($tablet-widths) {
+      width: 230px;
+    }
+
+    @media ($desktop-widths) {
+      margin-left: 175px;
+    }
+  }
 }

@@ -1,8 +1,30 @@
 .page-main-inner__title {
   @include font-style(27px, 30px);
 
-  padding: 70px 30px;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
+
+  text-align: center;
+  padding: 70px 30px 77px;
 
   background: $color-grey;
+}
+
+@media ($tablet-widths) {
+  .page-main-inner__title {
+    @include font-style(43px, 50px);
+
+    width: 668px;
+    padding: 95px 50px 80px;
+  }
+}
+
+@media ($desktop-widths) {
+  .page-main-inner__title {
+    @include font-style(53px, 57px);
+
+    width: 1050px;
+
+    padding-bottom: 100px;
+  }
 }

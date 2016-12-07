@@ -1,0 +1,33 @@
+.product-parameters {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.product-parameters__field {
+  border-bottom: 1px solid $main-color-border;
+  padding: 8px 0;
+  width: 95px;
+}
+
+.product-parameters__value {
+  border-bottom: 1px solid $main-color-border;
+}
+
+@media ($tablet-widths) {
+  .product-parameters {
+    width: 290px;
+
+    margin-bottom: 30px;
+  }
+}
+
+@media ($desktop-widths) {
+
+  .product-parameters {
+    width: 470px;
+    padding-left: 170px;
+    margin-bottom: 85px;
+  }
+
+}

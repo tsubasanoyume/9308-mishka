@@ -1,18 +1,84 @@
 .make-process {
-  width: 260px;
+  position: relative;
+  width: 257px;
 
-  border: 2px solid $main-color-border;
+  border: 1px solid $main-color-border;
+
+  @include clearfix();
 }
 
 .make-process__title {
   @include font-style();
 
-  margin-left: 90px;
+  margin: 20px 0 25px 90px;
 }
 
 .make-process__text {
-  padding: 0 28px 30px;
+  padding: 25px 35px 30px;
 
   font-size: 13px;
   line-height: 24px;
+}
+
+.make-process__description {
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+@media ($tablet-widths) {
+  .make-process {
+    width: 100%;
+
+    padding-top: 477px;
+  }
+
+  .make-process__image {
+    position: absolute;
+    top: 0;
+  }
+
+  .make-process__title {
+    @include font-style(20px, 24px);
+
+    margin-left: 105px;
+    margin-bottom: 15px;
+  }
+
+  .make-process__description {
+    margin-bottom: 40px;
+  }
+
+  .make-process__text {
+    padding: 25px 40px 40px;
+  }
+
+}
+
+@media ($desktop-widths) {
+  .make-process {
+    padding-top: 0;
+
+    margin-bottom: 80px;
+  }
+
+  .make-process__image {
+    position: static;
+  }
+
+  .make-process__title {
+    float: right;
+    width: 290px;
+
+    margin: 95px 0 0 30px;
+  }
+
+  .make-process__description {
+    float: right;
+    width: 250px;
+
+    font-size: 15px;
+    line-height: 30px;
+
+    margin-bottom: 150px;
+  }
 }

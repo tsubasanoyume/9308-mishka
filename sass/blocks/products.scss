@@ -1,3 +1,15 @@
 .products {
   padding: 30px;
 }
+
+@media ($tablet-widths) {
+  .products {
+    padding-top: 80px;
+  }
+}
+
+@media ($desktop-widths) {
+  .products {
+    padding-top: 130px;
+  }
+}

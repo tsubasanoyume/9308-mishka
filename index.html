@@ -7,53 +7,62 @@
   </head>
   <body>
 
-    <header class="page-header wrap">
+    <header class="page-header">
       <div class="page-header__logo">
         <a href="index.html" class="page-header__logo-link">
           <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
         </a>
       </div>
       <nav class="menu-list menu-list--close">
-        <button class="menu-list__switch">Меню</button>
+        <button class="menu-list__switch hidden">Меню</button>
         <ul class="menu-list__items">
-          <li class="menu-list__item">
-            <a href="catalog.html" class="menu-list__link">Каталог товаров</a>
+          <li class="menu-list__item menu-list__item--catalog">
+            <a href="catalog.html" class="menu-list__link menu-list__link--catalog">Каталог товаров</a>
           </li>
-          <li class="menu-list__item">
-            <a href="form.html" class="menu-list__link">Вязание на заказ</a>
+          <li class="menu-list__item menu-list__item--form">
+            <a href="form.html" class="menu-list__link menu-list__link--form">Вязание на заказ</a>
           </li>
-          <li class="menu-list__item">
+          <li class="menu-list__item menu-list__item--search">
             <a href="#" class="menu-list__link menu-list__link--search">Поиск по сайту</a>
           </li>
-          <li class="menu-list__item">
+          <li class="menu-list__item menu-list__item--basket">
             <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пусто</a>
+          </li>
+          <li class="menu-list__item menu-list__item--new">
+            <a href="#" class="menu-list__link menu-list__link--new">Новые поступления</a>
+          </li>
+          <li class="menu-list__item menu-list__item--sale">
+            <a href="#" class="menu-list__link menu-list__link--sale">Распродажа</a>
+          </li>
+          <li class="menu-list__item menu-list__item--delivery">
+            <a href="#" class="menu-list__link menu-list__link--delivery">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page-main">
-      <section class="main-header wrap">
+      <section class="main-header">
         <h1 class="main-header__title">Милые штуки ручной работы для дома</h1>
       </section>
       <section class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
-            <a href="#" class="main-nav__list-link main-nav__list-link--interior">Предметы интерьера</a>
+            <a href="#" class="main-nav__list-link main-nav__list-link--interior">Предметы<br>интерьера</a>
           </li>
           <li class="main-nav__list-item">
-            <a href="#" class="main-nav__list-link main-nav__list-link--toys">Детские игрушки</a>
+            <a href="#" class="main-nav__list-link main-nav__list-link--toys">Детские<br>игрушки</a>
           </li>
         </ul>
       </section>
-      <section class="main-week-product wrap">
+      <section class="main-week-product page-wrapper">
         <h2 class="main-week-product__title">Вязаные корзинки</h2>
         <span class="main-week-product__mark">Товар недели</span>
         <p class="main-week-product__description">Экологически чистая пряжа, ручная работа. Доступны  в шести расцветках, и трех размерах.</p>
         <table class="product-parameters">
           <tr class="product-parameters__item">
             <td class="product-parameters__field">Цвет:</td>
-            <td class="product-parameters__value">"Тиффани"/серый</td>
+            <td class="product-parameters__value">«Тиффани»/серый</td>
           </tr>
           <tr class="product-parameters__item">
             <td class="product-parameters__field">Диаметр:</td>
@@ -68,20 +77,24 @@
           <img src="img/triple-set-mobile@1x.jpg" class="main-week-product__image" width="260" height="315">
         </figure>
         <span class="main-week-product__price">Цена: 990 руб.</span>
-        <a href="#" class="btn">Заказать</a>
+        <a href="#" class="btn btn--order">Заказать</a>
       </section>
-      <section class="main-about-us wrap">
-        <h2 class="main-about-us__title">Коротко о нас</h2>
+      <section class="main-about-us page-wrapper">
+        <h2 class="main-about-us__title">Коротко о нас:</h2>
         <ul class="features-list">
-          <li class="features-list__item features-list__item--flower">Экологически чистые материалы</li>
-          <li class="features-list__item features-list__item--money">Скандинавский стиль по российской цене</li>
-          <li class="features-list__item features-list__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="features-list__item features-list__item--yarn">Связано вручную с любовью и умилением</li>
-          <li class="features-list__item features-list__item--rocket">Поддержка отечественного производителя</li>
-          <li class="features-list__item features-list__item--present">Поставляется в подарочной упаковке</li>
+          <div class="features-list__left">
+            <li class="features-list__item features-list__item--flower">Экологически чистые материалы</li>
+            <li class="features-list__item features-list__item--money">Скандинавский стиль по российской цене</li>
+            <li class="features-list__item features-list__item--heart">Увеличивает лайки на фотографиях</li>
+          </div>
+          <div class="features-list__right">
+            <li class="features-list__item features-list__item--yarn">Связано вручную с любовью и умилением</li>
+            <li class="features-list__item features-list__item--rocket">Поддержка отечественного производителя</li>
+            <li class="features-list__item features-list__item--present">Поставляется в подарочной упаковке</li>
+          </div>
         </ul>
       </section>
-      <section class="main-reviews wrap">
+      <section class="main-reviews page-wrapper">
         <h2 class="main-reviews__title">Отзывы</h2>
         <p class="main-reviews__text">
           Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
@@ -91,29 +104,29 @@
         <a href="#" class="main-reviews__author">Анастасия Красильникова</a>
         <a href="#" class="main-reviews__username">@misssssiskras</a>
         <div class="pagination">
-          <a href="#" class="pagination__previous">Назад</a>
-          <a href="#" class="pagination__next">Вперёд</a>
+          <a href="#" class="pagination__button pagination__button--previous">Назад</a>
+          <a href="#" class="pagination__button pagination__button--next">Вперёд</a>
         </div>
-        <a href="#" class="btn">Написать</a>
+        <a href="#" class="btn btn--reviews">Написать</a>
       </section>
-      <section class="main-contacts wrap">
+      <section class="main-contacts page-wrapper">
         <h3 class="main-contacts__title">Контакты</h3>
         <table class="main-contacts__list">
-          <tr class="main-contacts__item">
+          <tr class="main-contacts__item--left">
             <td class="main-contacts__value">e-mail:</td>
-            <td class="main-contacts__field">info@mimimishkashop.ru</td>
+            <td class="main-contacts__field main-contacts__field--bordered">info@mimimishkashop.ru</td>
           </tr>
-          <tr class="main-contacts__item">
+          <tr class="main-contacts__item--right">
             <td class="main-contacts__value">адрес:</td>
             <td class="main-contacts__field">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
           </tr>
         </table>
         <div class="main-contacts__map"></div>
-        <a href="#" class="btn">Напишите нам</a>
+        <a href="#" class="btn btn--write">Напишите нам</a>
       </section>
     </main>
 
-    <div class="basket-modal">
+    <div class="basket-modal hidden">
       <h2 class="basket-modal__title">Добавить в корзину</h2>
       <p class="basket-modal__text">Выберите размер:</p>
       <form action="/echo" method="post" class="basket-modal__form">
@@ -129,7 +142,12 @@
       </form>
     </div>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-wrapper">
+      <div class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo-link">
+          <img src="http://placehold.it/100x40" class="page-footer__logo-image" width="100" height="50">
+        </a>
+      </div>
       <div class="page-footer__social">
         <a href="#" class="social social--inst">Instagram</a>
         <a href="#" class="social social--fb">Facebook</a>
