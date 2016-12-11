@@ -2,21 +2,22 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Мишка - Каталог</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
 
-    <header class="page-header wrap">
-      <div class="page-header__logo">
-        <a href="index.html" class="page-header__logo-link">
-          <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
-        </a>
-      </div>
-      <nav class="menu-list menu-list--close">
-        <button class="menu-list__switch hidden">Меню</button>
+    <header class="page-header page-wrapper">
+      <nav class="menu-list menu-list--close menu-list--no-js">
+        <button class="menu-list__switch">Меню</button>
         <ul class="menu-list__items">
+          <li class="menu-list__item menu-list__item--logo">
+            <a href="index.html" class="menu-list__logo-link">
+              <img src="http://placehold.it/100x50" class="menu-list__logo-image" width="100" height="50">
+            </a>
+          </li>
           <li class="menu-list__item menu-list__item--catalog">
             <a href="catalog.html" class="menu-list__link menu-list__link--catalog">Каталог товаров</a>
           </li>
@@ -27,24 +28,24 @@
             <a href="#" class="menu-list__link menu-list__link--search">Поиск по сайту</a>
           </li>
           <li class="menu-list__item menu-list__item--basket">
-            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пусто</a>
+            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пуста</a>
           </li>
-          <li class="menu-list__item menu-list__item--new">
+          <li class="menu-list__item menu-list__item--new hidden">
             <a href="#" class="menu-list__link menu-list__link--new">Новые поступления</a>
           </li>
-          <li class="menu-list__item menu-list__item--sale">
+          <li class="menu-list__item menu-list__item--sale hidden">
             <a href="#" class="menu-list__link menu-list__link--sale">Распродажа</a>
           </li>
-          <li class="menu-list__item menu-list__item--delivery">
-            <a href="#" class="menu-list__link menu-list__link--delivery">Бесплатная доставка по России</a>
+          <li class="menu-list__item menu-list__item--delivery hidden">
+            <span>Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-main-inner">
+    <main class="page-main-inner page-wrapper">
       <h1 class="page-main-inner__title">Вязание на заказ</h1>
-      <form action="/echo" method="post" class="order-form page-wrapper">
+      <form action="/echo" method="post" class="order-form">
         <p class="order-form__description">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
           мы свяжемся с вами, чтобы уточнить детали.
@@ -66,7 +67,7 @@
             <input type="checkbox" name="grey" class="hidden" id="grey" checked>
             <label for="grey" class="order-form__color-checkbox">Серый</label>
             <input type="checkbox" name="tiffany" class="hidden" id="tiffany">
-            <label for="tiffany" class="order-form__color-checkbox">"Тиффани"</label>
+            <label for="tiffany" class="order-form__color-checkbox">«Тиффани»</label>
             <input type="checkbox" name="black" class="hidden" id="black">
             <label for="black" class="order-form__color-checkbox">Черный</label>
             <input type="checkbox" name="pink" class="hidden" id="pink">
@@ -75,32 +76,42 @@
             <label for="orange" class="order-form__color-checkbox">Оранжевый</label>
           </div>
         </div>
-        <div class="order-form__filters">
+        <div class="order-form__filters order-form__filters--name">
           <span class="order-form__title">ФИО</span>
-          <div class="order-form__fields">
-            <label for="first-name" class="order-form__text">Имя:</label>
-            <input type="text" name="first-name" class="order-form__field" id="first-name" placeholder="Введите ваше имя*" required>
-            <label for="last-name" class="order-form__text">Фамилия:</label>
-            <input type="text" name="last-name" class="order-form__field" id="last-name" placeholder="Укажите фамилию*" required>
-            <label for="patronym" class="order-form__text">Отчество:</label>
-            <input type="text" name="patronym" class="order-form__field" id="patronym" placeholder="Отчество, если желаете">
+          <div class="order-form__fields order-form__fields--name">
+            <div class="order-form__field--name">
+              <label for="first-name" class="order-form__text">Имя:</label>
+              <input type="text" name="first-name" class="order-form__field" id="first-name" placeholder="Введите ваше имя*" required>
+            </div>
+            <div class="order-form__field--name">
+              <label for="last-name" class="order-form__text">Фамилия:</label>
+              <input type="text" name="last-name" class="order-form__field" id="last-name" placeholder="Укажите фамилию*" required>
+            </div>
+            <div class="order-form__field--name">
+              <label for="patronym" class="order-form__text">Отчество:</label>
+              <input type="text" name="patronym" class="order-form__field" id="patronym" placeholder="Отчество, если желаете">
+            </div>
           </div>
         </div>
         <div class="order-form__filters order-form__filters--bg">
-          <label class="order-form__title" for="phone">Тел</label>
-          <input type="tel" name="phone" class="order-form__field" id="phone" placeholder="+7 XXX XX XX*" required>
-
-          <label class="order-form__title" for="email">E-mail</label>
-          <input type="email" name="email" class="order-form__field" id="email" placeholder="Ваш Email*" required>
+          <div class="order-form__field--contact">
+            <label class="order-form__title" for="phone">Тел</label>
+            <input type="tel" name="phone" class="order-form__field order-form__field--contact" id="phone" placeholder="+7 XXX XX XX*" required>
+          </div>
+          <div class="order-form__field--contact">
+            <label class="order-form__title" for="email">E-mail</label>
+            <input type="email" name="email" class="order-form__field order-form__field--contact" id="email" placeholder="Ваш Email*" required>
+          </div>
         </div>
-        <div class="order-form__filters">
+        <div class="order-form__filters order-form__filters--comment">
           <label class="order-form__title" for="comment">Доп</label>
           <textarea name="comment" class="order-form__comment-textfield" id="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
+        <div class="order-form__send">
+          <small class="order-form__note">*Поля обязательны для заполнения</small>
 
-        <small class="order-form__note">*Поля обязательны для заполнения</small>
-
-        <input type="submit" class="btn btn--send" value="Отправить заказ">
+          <input type="submit" class="btn btn--send" value="Отправить заказ">
+        </div>
       </form>
     </main>
 
@@ -120,6 +131,41 @@
         <a href="#" class="page-footer__maker-link">HTMLAcademy</a>
       </div>
     </footer>
+
+    <script>
+      var menuList = document.querySelector(".menu-list");
+      var button = document.querySelector(".menu-list__switch");
+      var catalogLink = document.querySelector(".menu-list__item--catalog");
+      var formLink = document.querySelector(".menu-list__item--form");
+      var searchLink = document.querySelector(".menu-list__item--search");
+      var basketLink = document.querySelector(".menu-list__item--basket");
+
+      menuList.classList.remove("menu-list--no-js");
+
+      catalogLink.classList.add("hidden");
+      formLink.classList.add("hidden");
+      searchLink.classList.add("hidden");
+      basketLink.classList.add("hidden");
+
+      button.addEventListener("click", function() {
+        if (menuList.classList.contains("menu-list--close")) {
+          menuList.classList.remove("menu-list--close");
+          menuList.classList.add("menu-list--open");
+          catalogLink.classList.toggle("hidden");
+          formLink.classList.toggle("hidden");
+          searchLink.classList.toggle("hidden");
+          basketLink.classList.toggle("hidden");
+        } else {
+          menuList.classList.remove("menu-list--open");
+          menuList.classList.add("menu-list--close");
+          catalogLink.classList.toggle("hidden");
+          formLink.classList.toggle("hidden");
+          searchLink.classList.toggle("hidden");
+          basketLink.classList.toggle("hidden");
+        }
+      });
+    </script>
+
 
   </body>
 

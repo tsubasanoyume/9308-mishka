@@ -1,6 +1,5 @@
 .main-week-product {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 28px 0 40px;
 
   border-bottom: 2px solid $color-grey;
 
@@ -9,7 +8,7 @@
 
 .main-week-product__title {
   @include font-style(25px, 30px);
-  margin: 0;
+  margin: 0 0 2px;
 }
 
 .main-week-product__mark {
@@ -28,58 +27,52 @@
   color: $color-light-black;
 
   display: block;
-  padding: 20px 0 25px;
+  padding: 16px 0 25px;
   text-align: center;
-}
-
-.main-week-product__image-container {
-  margin: 0;
 }
 
 @media ($tablet-widths) {
 
   .main-week-product {
-    padding-top: 50px;
+    padding-top: 45px;
     padding-bottom: 55px;
   }
 
   .main-week-product__title {
-    @include font-style(43px, 50px);
+    @include font-resize(43px, 50px);
 
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .main-week-product__mark {
     display: block;
-    width: 90px;
+    width: 125px;
     text-align: center;
 
     position: absolute;
-    top: 60px;
-    right: 65px;
+    top: 55px;
+    right: 0;
   }
 
   .main-week-product__description {
+    @include font-resize(17px, 30px);
+
     width: 290px;
-
-    font-size: 17px;
-    line-height: 30px;
-
     margin-bottom: 35px;
   }
 
   .main-week-product__image-container {
     position: absolute;
 
-    right: 50px;
+    right: 0;
     top: 150px;
   }
 
   .main-week-product__price {
-    @include font-style(20px, 24px);
+    @include font-resize(20px, 24px);
 
     width: 290px;
-    margin-bottom: 10px;
+    padding: 23px 0 35px;
   }
 
 }
@@ -87,39 +80,33 @@
 @media ($desktop-widths) {
 
   .main-week-product {
-    padding-bottom: 80px;
+    padding: 120px 0 80px 175px;
   }
 
   .main-week-product__title {
     @include font-style(53px, 57px);
     position: relative;
     z-index: 1;
-
-    padding-left: 170px;
-    padding-top: 75px;
     margin-bottom: 50px;
   }
 
   .main-week-product__mark {
     top: 140px;
     right: 0;
-    left: 65px;
+    left: 20px;
   }
 
   .main-week-product__description {
-    padding-left: 170px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .main-week-product__image-container {
-    right: 200px;
+    right: 0;
     top: 70px;
   }
 
   .main-week-product__price {
-    padding-left: 175px;
-    width: 300px;
-    margin-bottom: 10px;
+    padding: 27px 0 35px 5px;
   }
 
 }
