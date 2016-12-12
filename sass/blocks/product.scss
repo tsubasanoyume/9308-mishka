@@ -111,9 +111,18 @@
 
   .product__text {
     width: 100%;
+    min-height: 196px;
     box-sizing: border-box;
 
     padding-top: 23px;
+
+    &:hover {
+      box-shadow: 1px 5px 15px 2px $color-border-product;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 $color-border-product;
+    }
   }
 
   .product__description {

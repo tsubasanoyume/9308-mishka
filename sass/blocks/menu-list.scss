@@ -109,7 +109,7 @@
 
   &--catalog {
     position: absolute;
-
+    z-index: 3;
     top: 78px;
     background: #fff;
     width: 260px;
@@ -117,7 +117,7 @@
 
   &--form {
     position: absolute;
-
+    z-index: 3;
     top: 153px;
     background: #fff;
     width: 260px;
@@ -125,7 +125,7 @@
 
   &--search {
     position: absolute;
-
+    z-index: 3;
     top: 228px;
     background: #fff;
     width: 260px;
@@ -133,7 +133,7 @@
 
   &--basket {
     position: absolute;
-
+    z-index: 3;
     top: 303px;
     background: #fff;
     width: 260px;

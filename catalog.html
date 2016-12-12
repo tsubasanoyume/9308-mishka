@@ -99,18 +99,18 @@
       </div>
     </main>
 
-    <div class="basket-modal hidden">
+    <div class="basket-modal basket-modal--catalog hidden-modal">
       <h2 class="basket-modal__title">Добавить в корзину</h2>
       <p class="basket-modal__text">Выберите размер:</p>
       <form action="/echo" method="post" class="basket-modal__form">
-
-        <label for="small" class="basket-modal__label-size">S</label>
-        <input type="radio" name="size" id="small" class="hidden" value="small" checked>
-        <label for="medium" class="basket-modal__label-size">M</label>
-        <input type="radio" name="size" id="medium" class="hidden" value="medium">
-        <label for="large" class="basket-modal__label-size">L</label>
-        <input type="radio" name="size" id="large" class="hidden" value="large">
-
+        <div class="basket-modal__fields">
+          <input type="radio" name="size" id="small" class="hidden" value="small" checked>
+          <label for="small" class="basket-modal__label-size">S</label>
+          <input type="radio" name="size" id="medium" class="hidden" value="medium">
+          <label for="medium" class="basket-modal__label-size">M</label>
+          <input type="radio" name="size" id="large" class="hidden" value="large">
+          <label for="large" class="basket-modal__label-size">L</label>
+        </div>
         <input type="submit" class="btn btn--basket" value="Добавить">
       </form>
     </div>
@@ -132,41 +132,7 @@
       </div>
     </footer>
 
-    <script>
-      var menuList = document.querySelector(".menu-list");
-      var button = document.querySelector(".menu-list__switch");
-      var catalogLink = document.querySelector(".menu-list__item--catalog");
-      var formLink = document.querySelector(".menu-list__item--form");
-      var searchLink = document.querySelector(".menu-list__item--search");
-      var basketLink = document.querySelector(".menu-list__item--basket");
-
-      menuList.classList.remove("menu-list--no-js");
-
-      catalogLink.classList.add("hidden");
-      formLink.classList.add("hidden");
-      searchLink.classList.add("hidden");
-      basketLink.classList.add("hidden");
-
-      button.addEventListener("click", function() {
-        if (menuList.classList.contains("menu-list--close")) {
-          menuList.classList.remove("menu-list--close");
-          menuList.classList.add("menu-list--open");
-          catalogLink.classList.toggle("hidden");
-          formLink.classList.toggle("hidden");
-          searchLink.classList.toggle("hidden");
-          basketLink.classList.toggle("hidden");
-        } else {
-          menuList.classList.remove("menu-list--open");
-          menuList.classList.add("menu-list--close");
-          catalogLink.classList.toggle("hidden");
-          formLink.classList.toggle("hidden");
-          searchLink.classList.toggle("hidden");
-          basketLink.classList.toggle("hidden");
-        }
-      });
-    </script>
-
-
+  <script type="text/javascript" src="js/app.js"></script>
   </body>
 
 </html>

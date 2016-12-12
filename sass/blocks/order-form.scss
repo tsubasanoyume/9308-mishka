@@ -86,11 +86,6 @@
 
   &:focus {
     outline: none;
-
-    border-bottom-color: $color-light-green;
-  }
-
-  &:hover {
     border-bottom-color: $color-light-green;
   }
 }
@@ -126,10 +121,6 @@
   &:focus {
     outline: none;
 
-    border-color: $color-light-green;
-  }
-
-  &:hover {
     border-color: $color-light-green;
   }
 }
@@ -285,8 +276,9 @@
   }
 
   .order-form__title {
-    width: 175px;
-    text-align: center;
+    width: 113px;
+    display: block;
+    padding-left: 62px;
     padding-top: 20px;
   }
 
@@ -306,6 +298,10 @@
   .order-form__field {
     width: 100%;
     margin-right: 175px;
+
+    &:hover {
+      border-bottom-color: $color-light-green;
+    }
   }
 
   .order-form__text {
@@ -313,7 +309,6 @@
   }
 
   .order-form__field--contact {
-    margin-left: 30px;
     margin-bottom: 13px;
   }
 
@@ -323,12 +318,15 @@
   }
 
   .order-form__filters--comment .order-form__title {
-    padding-left: 15px;
-    padding-top: 15px;
+    // padding-top: 15px;
   }
 
   .order-form__comment-textfield {
     margin-right: 175px;
+
+    &:hover {
+      border-color: $color-light-green;
+    }
   }
 
   .order-form__note {

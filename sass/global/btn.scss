@@ -25,6 +25,15 @@
     border: 2px solid $color-light-green;
     color: #fff;
     width: 100%;
+
+    &:hover {
+      background: $color-light-green;
+    }
+
+    &:active {
+      color: #fff;
+      background: $color-light-green;
+    }
   }
 
   &--order {
