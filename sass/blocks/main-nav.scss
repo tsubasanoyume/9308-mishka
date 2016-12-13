@@ -61,5 +61,10 @@
 @media ($desktop-widths) {
   .main-nav__list-link {
     padding: 30px 40px;
+
+    &:hover {
+      margin-top: -5px;
+      padding-bottom: 35px;
+    }
   }
 }
