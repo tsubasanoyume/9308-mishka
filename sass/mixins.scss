@@ -23,14 +23,13 @@
   }
 }
 
-@mixin link-style() {
-  text-decoration: none;
-
-  color: #000;
-}
-
 @mixin font-style($font-size: 17px, $line-height: 24px) {
   font-family: "OpenSans Bold", "Times New Roman", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin font-resize($font-size: 17px, $line-height: 24px) {
   font-size: $font-size;
   line-height: $line-height;
 }

@@ -1,3 +1,29 @@
 .features-list {
   @include font-style();
+
+  list-style: none;
+}
+
+.features-list__item {
+  padding-top: 60px;
+
+  margin-bottom: 15px;
+}
+
+@media ($tablet-widths) {
+  .features-list {
+    display: flex;
+  }
+
+  .features-list__item {
+    @include font-resize(20px);
+
+    margin-bottom: 50px;
+  }
+}
+
+@media ($desktop-widths) {
+  .features-list__item {
+    width: 350px;
+  }
 }

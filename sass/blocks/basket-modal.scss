@@ -1,15 +1,84 @@
 .basket-modal {
-  width: 260px;
-  padding: 10px 30px 50px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 256px;
+  padding: 10px 30px 46px;
+  background: #fff;
+  margin-left: -30px;
 
   text-align: center;
+  border: 1px solid $color-border-modal;
 
-  border: 2px solid $color-border-modal;
+  box-shadow: 0 5px 10px 2px $color-border-modal;
+}
+
+.basket-modal--catalog {
+  // top: 50%;
+  left: 50%;
+
+  margin-left: -158px;
 }
 
 .basket-modal__title {
   @include font-style(25px, 30px);
 
   text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.basket-modal__text {
+  margin: 0;
+}
+
+.basket-modal__fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-modal__label-size {
+  display: block;
+  height: 24px;
+  width: 80px;
+  padding: 8px 0;
+  margin: 31px 0;
+
+  border: 2px solid $main-color-border;
+
+  &:hover {
+    border: 2px solid $color-border-modal;
+  }
+}
+
+input[type="radio"]:checked + .basket-modal__label-size {
+  border: 2px solid $color-light-green;
+}
+
+
+@media ($tablet-widths) {
+  .basket-modal {
+    width: 351px;
+    padding-left: 108px;
+    padding-right: 106px;
+
+    left: 50%;
+    margin-left: -283px;
+  }
+
+  .basket-modal__label-size {
+    width: 100px;
+  }
+}
+
+@media ($desktop-widths) {
+  .basket-modal__label-size {
+    width: 110px;
+  }
+}
+
+.hidden-modal {
+  display: none;
 }

@@ -1,33 +1,54 @@
 .order-form {
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 55px;
   position: relative;
-
-  @include clearfix();
 }
 
 .order-form__description {
-  font-size: 13px;
-  line-height: 24px;
+  @include font-resize(13px, 24px);
+  padding-bottom: 25px;
 
   margin: 0;
+}
+
+.order-form__filters {
+  padding-bottom: 3px;
+}
+
+.order-form__fields {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .order-form__title {
   @include font-style(17px, 16px);
 
   display: block;
+  position: relative;
 
   color: $color-light-green;
   text-transform: uppercase;
 
-  margin: 20px 0;
+  &:after {
+    content: "";
+
+    display: block;
+    position: absolute;
+
+    width: 76%;
+    height: 1px;
+    background: $color-light-green;
+
+    top: 50%;
+    right: 0;
+  }
 }
 
 .order-form__type-radio {
   @include font-style(17px, 18px);
 
   display: block;
-  margin: 45px 0;
+  padding: 15px 0;
   margin-left: 60px;
 }
 
@@ -35,112 +56,200 @@
   @include font-style(17px, 18px);
 
   display: block;
-  margin: 45px 0;
+  padding: 15px 0;
   margin-left: 60px;
+  margin-bottom: 14px;
+}
+
+.order-form__color-checkbox:last-child {
+  margin-bottom: 3px;
 }
 
 .order-form__text {
   @include font-style(17px, 18px);
 
   display: block;
-  margin: 20px 0;
+  margin-top: 10px;
+}
+
+.order-form__field {
+  border: none;
+  border-bottom: 2px solid #000;
+  width: 100%;
+
+  padding: 16px 0;
+  margin-bottom: 12px;
+
+  font-family: "OpenSans", "Times New Roman", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $color-light-green;
+  }
+}
+
+.order-form__field--contact {
+  margin-top: 7px;
+  margin-bottom: 30px;
 }
 
 .order-form__note {
   display: block;
 
   margin-bottom: 30px;
+
+  @include font-resize(14px, 16px);
+}
+
+.order-form__comment-textfield {
+  margin-top: 27px;
+  margin-bottom: 7px;
+
+  width: 225px;
+  height: 107px;
+  padding: 15px;
+  resize: none;
+
+  border: 2px solid #000;
+
+  font-family: "OpenSans", "Times New Roman", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+
+  &:focus {
+    outline: none;
+
+    border-color: $color-light-green;
+  }
 }
 
 @media ($tablet-widths) {
   .order-form {
     padding-top: 75px;
+    padding-bottom: 47px;
   }
 
   .order-form__description {
-    font-size: 17px;
-    line-height: 30px;
+    @include font-resize(17px, 30px);
+
+    padding-bottom: 0;
   }
 
   .order-form__filters {
-    @include clearfix();
-
-    padding: 50px 0 30px;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 28px;
 
     &--bg {
       background: $color-grey;
+      flex-wrap: wrap;
+
       margin: 0 -50px;
       padding-left: 50px;
-      padding-top: 45px;
-      padding-bottom: 40px;
     }
   }
 
   .order-form__title {
     display: block;
+
+    padding-top: 15px;
     width: 167px;
-    float: left;
+
+    &:after {
+      display: none;
+    }
   }
 
   .order-form__fields {
-    float: left;
-    width: 500px;
+    padding: 0;
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .order-form__color-checkbox {
-    display: inline-block;
+    width: 183px;
 
-    vertical-align: top;
-    width: 140px;
-    margin-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 19px;
     margin-left: 80px;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
 
-    @include font-style(19px, 18px);
+    @include font-resize(19px, 18px);
   }
 
   .order-form__type-radio {
     margin-top: 0;
-    margin-left: 80px;
+    margin-left: 93px;
     margin-bottom: 20px;
 
     padding: 20px 0;
 
-    @include font-style(19px, 18px);
+    @include font-resize(19px, 18px);
   }
 
   .order-form__text {
-    display: inline-block;
+    margin-top: 15px;
+    margin-left: 13px;
 
-    margin-right: 20px;
-    padding-bottom: 15px;
-    @include font-style(19px, 18px);
+    @include font-resize(19px, 18px);
   }
 
   .order-form__field {
-    display: inline-block;
+    padding-left: 15px;
 
-    width: 70%;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &--contact {
+      background: $color-grey;
+
+      margin-top: 0;
+      padding-left: 0;
+    }
   }
 
   .order-form__comment-textfield {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    height: 120px;
-    width: 470px;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+    margin-left: 48px;
+    height: 110px;
+    width: 100%;
+  }
+
+  .order-form__send {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .order-form__note {
-    display: block;
-    float: right;
-
-    font-size: 17px;
-    line-height: 30px;
+    margin-bottom: 0;
     padding-top: 10px;
+
+    @include font-resize(17px, 30px);
+  }
+
+  .order-form__fields--name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-form__field--name {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .order-form__field--contact {
+    padding-right: 50px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 11px;
   }
 }
 
@@ -155,29 +264,69 @@
   }
 
   .order-form__filters {
-    padding-left: 60px;
     padding-top: 35px;
 
     &--bg {
-      padding-left: 110px;
       padding-top: 45px;
+    }
+
+    &--name {
+      padding-top: 52px;
     }
   }
 
   .order-form__title {
-    width: 115px;
+    width: 113px;
+    display: block;
+    padding-left: 62px;
+    padding-top: 20px;
   }
 
   .order-form__fields {
     width: 875px;
   }
 
+  .order-form__type-radio {
+    margin-left: 80px;
+    width: 70%;
+  }
+
   .order-form__color-checkbox {
-    width: 160px;
+    width: 21%;
   }
 
   .order-form__field {
-    width: 80%;
+    width: 100%;
+    margin-right: 175px;
+
+    &:hover {
+      border-bottom-color: $color-light-green;
+    }
+  }
+
+  .order-form__text {
+    margin-left: 0;
+  }
+
+  .order-form__field--contact {
+    margin-bottom: 13px;
+  }
+
+  .order-form__filters--comment {
+    padding-top: 48px;
+    padding-bottom: 22px;
+  }
+
+  .order-form__filters--comment .order-form__title {
+    // padding-top: 15px;
+  }
+
+  .order-form__comment-textfield {
+    margin-right: 175px;
+
+    &:hover {
+      border-color: $color-light-green;
+    }
   }
 
   .order-form__note {

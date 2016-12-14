@@ -1,84 +1,100 @@
 .make-process {
-  position: relative;
-  width: 257px;
+  padding: 7px 34px 32px;
 
   border: 1px solid $main-color-border;
-
-  @include clearfix();
 }
 
 .make-process__title {
   @include font-style();
 
-  margin: 20px 0 25px 90px;
+  margin-left: 55px;
+  margin-bottom: 25px;
 }
 
 .make-process__text {
-  padding: 25px 35px 30px;
-
-  font-size: 13px;
-  line-height: 24px;
+  @include font-resize(13px, 24px);
 }
 
 .make-process__description {
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
+}
+
+.make-process__image {
+  margin: 0 -34px 20px;
 }
 
 @media ($tablet-widths) {
-  .make-process {
-    width: 100%;
 
-    padding-top: 477px;
+  .make-process {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .make-process__image {
-    position: absolute;
-    top: 0;
+    margin: 0;
+
+    order: -1;
+    padding-bottom: 306px; //пока нет картинки
   }
 
   .make-process__title {
-    @include font-style(20px, 24px);
+    @include font-resize(20px, 24px);
 
-    margin-left: 105px;
-    margin-bottom: 15px;
+    margin: 38px 30px 30px 105px;
   }
 
   .make-process__description {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .make-process__text {
-    padding: 25px 40px 40px;
+    @include font-resize(15px, 30px);
+
+    padding: 2px 40px 45px;
   }
 
 }
 
 @media ($desktop-widths) {
   .make-process {
-    padding-top: 0;
+    width: 100%;
+    align-items: flex-end;
 
-    margin-bottom: 80px;
+    position: relative;
   }
 
   .make-process__image {
-    position: static;
+    width: 681px;
   }
 
   .make-process__title {
-    float: right;
-    width: 290px;
+    width: 230px;
 
-    margin: 95px 0 0 30px;
+    margin: 95px 60px 32px 30px;
   }
 
   .make-process__description {
-    float: right;
     width: 250px;
 
     font-size: 15px;
     line-height: 30px;
 
-    margin-bottom: 150px;
+    margin-bottom: 48px;
+  }
+
+  .make-process__image {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+  }
+
+  .make-process__text {
+    @include font-resize(15px, 30px);
+
+    padding: 2px 40px 55px 40px;
   }
 }

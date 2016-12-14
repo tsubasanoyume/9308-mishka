@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Мишка - Каталог</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -9,14 +10,14 @@
   <body>
 
     <header class="page-header page-wrapper">
-      <div class="page-header__logo">
-        <a href="index.html" class="page-header__logo-link">
-          <img src="http://placehold.it/100x50" class="page-header__logo-image" width="100" height="50">
-        </a>
-      </div>
-      <nav class="menu-list menu-list--close">
-        <button class="menu-list__switch hidden">Меню</button>
+      <nav class="menu-list menu-list--close menu-list--no-js">
+        <button class="menu-list__switch">Меню</button>
         <ul class="menu-list__items">
+          <li class="menu-list__item menu-list__item--logo">
+            <a href="index.html" class="menu-list__logo-link">
+              <img src="http://placehold.it/100x50" class="menu-list__logo-image" width="100" height="50">
+            </a>
+          </li>
           <li class="menu-list__item menu-list__item--catalog">
             <a href="catalog.html" class="menu-list__link menu-list__link--catalog">Каталог товаров</a>
           </li>
@@ -27,27 +28,27 @@
             <a href="#" class="menu-list__link menu-list__link--search">Поиск по сайту</a>
           </li>
           <li class="menu-list__item menu-list__item--basket">
-            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пусто</a>
+            <a href="#" class="menu-list__link menu-list__link--basket">Корзина: пока пуста</a>
           </li>
-          <li class="menu-list__item menu-list__item--new">
+          <li class="menu-list__item menu-list__item--new hidden">
             <a href="#" class="menu-list__link menu-list__link--new">Новые поступления</a>
           </li>
-          <li class="menu-list__item menu-list__item--sale">
+          <li class="menu-list__item menu-list__item--sale hidden">
             <a href="#" class="menu-list__link menu-list__link--sale">Распродажа</a>
           </li>
-          <li class="menu-list__item menu-list__item--delivery">
-            <a href="#" class="menu-list__link menu-list__link--delivery">Бесплатная доставка по России</a>
+          <li class="menu-list__item menu-list__item--delivery hidden">
+            <span>Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-main-inner">
+    <main class="page-main-inner page-wrapper">
       <h1 class="page-main-inner__title">Каталог товаров</h1>
-      <div class="products page-wrapper">
+      <div class="products">
         <article class="product">
           <a href="#" class="product__link">
-            <img src="img/photo-1-mobile@1x.jpg" class="product__image" width="257" height="195">
+            <img src="img/photo-1-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
           <div class="product__text">
             <h3 class="product__title">
@@ -60,7 +61,7 @@
         </article>
         <article class="product">
           <a href="#" class="product__link">
-            <img src="img/photo-2-mobile@1x.jpg" class="product__image" width="257" height="195">
+            <img src="img/photo-2-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
           <div class="product__text">
             <h3 class="product__title">
@@ -73,7 +74,7 @@
         </article>
         <article class="product">
           <a href="#" class="product__link">
-            <img src="img/photo-3-mobile@1x.jpg" class="product__image" width="257" height="195">
+            <img src="img/photo-3-mobile@1x.jpg" class="product__image" width="260" height="195">
           </a>
           <div class="product__text">
             <h3 class="product__title">
@@ -86,7 +87,7 @@
         </article>
         <article class="make-process">
           <h3 class="make-process__title">Процесс производства</h3>
-          <img  src="img/video-mobile@1x.jpg" class="make-process__image" width="257" height="150">
+          <img  src="img/video-mobile@1x.jpg" class="make-process__image" width="259" height="150">
           <div class="make-process__text">
             <p class="make-process__description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются
@@ -98,18 +99,18 @@
       </div>
     </main>
 
-    <div class="basket-modal hidden">
+    <div class="basket-modal basket-modal--catalog hidden-modal">
       <h2 class="basket-modal__title">Добавить в корзину</h2>
       <p class="basket-modal__text">Выберите размер:</p>
       <form action="/echo" method="post" class="basket-modal__form">
-
-        <label for="small" class="basket-modal__label-size">S</label>
-        <input type="radio" name="size" id="small" class="hidden" value="small" checked>
-        <label for="medium" class="basket-modal__label-size">M</label>
-        <input type="radio" name="size" id="medium" class="hidden" value="medium">
-        <label for="large" class="basket-modal__label-size">L</label>
-        <input type="radio" name="size" id="large" class="hidden" value="large">
-
+        <div class="basket-modal__fields">
+          <input type="radio" name="size" id="small" class="hidden" value="small" checked>
+          <label for="small" class="basket-modal__label-size">S</label>
+          <input type="radio" name="size" id="medium" class="hidden" value="medium">
+          <label for="medium" class="basket-modal__label-size">M</label>
+          <input type="radio" name="size" id="large" class="hidden" value="large">
+          <label for="large" class="basket-modal__label-size">L</label>
+        </div>
         <input type="submit" class="btn btn--basket" value="Добавить">
       </form>
     </div>
@@ -131,6 +132,7 @@
       </div>
     </footer>
 
+  <script type="text/javascript" src="js/app.js"></script>
   </body>
 
 </html>
