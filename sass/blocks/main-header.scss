@@ -3,8 +3,15 @@
   margin: 0 -30px;
   padding: 50px;
 
-  background: $bg-color-main-header url("../img/hero-mobile@1x.jpg") no-repeat;
-  background-position: 50% 45%;
+  background-color: $bg-color-main-header;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .main-header__title {
@@ -16,10 +23,35 @@
 
 @media ($tablet-widths) {
   .main-header {
-    height: 600px;
+    height: 620px;
     padding: 65px 50px;
+    position: relative;
 
     margin: 0 -50px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-size: auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: cover;
+    }
+
+    &:after {
+      content: "";
+
+      display: block;
+      width: calc(100% + 20px);
+      height: 34px;
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      z-index: 1;
+    }
   }
 
   .main-header__title {
@@ -32,6 +64,13 @@
 @media ($desktop-widths) {
   .main-header {
     padding: 65px 175px;
+
+    &:after {
+      width: 100%;
+
+      left: 0;
+      bottom: -10px;
+    }
   }
 
   .main-header__title {

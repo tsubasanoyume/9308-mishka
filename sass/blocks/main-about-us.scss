@@ -6,19 +6,20 @@
 .main-about-us__title {
   @include font-style(25px, 30px);
   margin: 0;
-  margin-bottom: 20px;
+}
+
+.features-list__item-text {
+  margin-bottom: 0;
 }
 
 @media ($tablet-widths) {
   .main-about-us {
-    padding-top: 60px;
+    padding-top: 63px;
     padding-bottom: 27px;
   }
 
   .main-about-us__title {
     @include font-resize(43px, 50px);
-
-    margin-bottom: 40px;
   }
 }
 

@@ -1,0 +1,21 @@
+.social {
+  font-size: 0;
+  display: block;
+  height: 30px;
+  width: 30px;
+
+  &--inst,
+  &--tw {
+    padding-top: 5px;
+  }
+}
+
+@media ($desktop-widths) {
+  .social:hover .social__icon {
+    fill: $color-footer-icons;
+  }
+
+  .social:active {
+    opacity: .3;
+  }
+}
