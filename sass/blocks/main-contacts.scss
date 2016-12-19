@@ -61,6 +61,10 @@
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/map-mobile@2x.jpg");
   }
+
+  .main-contacts__map-inner {
+    height: 455px;
+  }
 }
 
 @media ($tablet-widths) {
@@ -118,7 +122,6 @@
       background-image: url("../img/map-tablet@2x.jpg");
     }
   }
-
 }
 
 @media ($desktop-widths) {
@@ -177,5 +180,10 @@
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/map-desktop@2x.jpg");
     }
+  }
+
+  .main-contacts__map-inner {
+    width: 525px;
+    height: 455px;
   }
 }

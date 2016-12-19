@@ -55,6 +55,16 @@
   fill: $bg-color-icons;
 }
 
+.product__image {
+  width: 260px;
+  height: 196px;
+}
+
+.make-process__image {
+  width: 260px;
+  height: 150px;
+}
+
 @media ($tablet-widths) {
   .product {
     display: flex;
@@ -109,6 +119,16 @@
     bottom: 0;
     right: 6px;
   }
+
+  .product__image {
+    width: 334px;
+    height: 334px;
+  }
+
+  .make-process__image {
+    width: 668px;
+    height: 455px;
+  }
 }
 
 @media ($desktop-widths) {
@@ -155,5 +175,15 @@
     &:active {
       opacity: .3;
     }
+  }
+
+  .product__image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .make-process__image {
+    width: 681px;
+    height: 456px;
   }
 }
