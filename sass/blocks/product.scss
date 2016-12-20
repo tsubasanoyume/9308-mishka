@@ -3,15 +3,16 @@
 }
 
 .product__text {
-  padding: 28px 28px 21px;
-  margin-top: -10px;
+  padding: 26px 28px 21px;
+  margin-top: -7px;
+  position: relative;
 
   border: 1px solid $main-color-border;
 }
 
 .product__title {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .product__title-link {
@@ -44,24 +45,45 @@
   font-size: 0;
 }
 
+.product__add-icon-container {
+  position: absolute;
+  right: 25px;
+  bottom: 32px;
+}
+
+.product__add-icon {
+  fill: $bg-color-icons;
+}
+
+.product__image {
+  width: 260px;
+  height: 196px;
+}
+
+.make-process__image {
+  width: 260px;
+  height: 150px;
+}
+
 @media ($tablet-widths) {
   .product {
     display: flex;
 
-    margin-bottom: 55px;
+    margin-bottom: 53px;
   }
 
   .product__link {
     width: 50%;
-    height: 332px;
+    height: 334px;
   }
 
   .product__text {
     width: 50%;
+    min-height: 332px;
     margin: 0;
     box-sizing: border-box;
 
-    padding: 25px;
+    padding: 23px 25px 25px;
 
     display: flex;
     flex-direction: column;
@@ -93,15 +115,29 @@
 
   .product__add-basket {
     position: absolute;
+
+    bottom: 0;
+    right: 6px;
+  }
+
+  .product__image {
+    width: 334px;
+    height: 334px;
+  }
+
+  .make-process__image {
+    width: 668px;
+    height: 455px;
   }
 }
 
 @media ($desktop-widths) {
   .product {
-    width: 315px;
+    width: 316px;
 
     flex-direction: column;
     flex-wrap: wrap;
+    margin-bottom: 57px;
   }
 
   .product__link {
@@ -114,7 +150,8 @@
     min-height: 196px;
     box-sizing: border-box;
 
-    padding-top: 23px;
+    margin-top: -3px;
+    padding-top: 25px;
 
     &:hover {
       box-shadow: 1px 5px 15px 2px $color-border-product;
@@ -128,5 +165,25 @@
   .product__description {
     margin-bottom: 0;
     padding-bottom: 12px;
+  }
+
+  .product__add-basket {
+    &:hover .product__add-icon {
+      fill: $color-light-green;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+
+  .product__image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .make-process__image {
+    width: 681px;
+    height: 456px;
   }
 }

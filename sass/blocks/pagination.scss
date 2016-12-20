@@ -14,25 +14,44 @@
 
 .pagination__button--previous {
   width: 130px;
+
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .pagination__button--next {
   width: 126px;
+
+  background-image: url("../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media ($tablet-widths) {
-
   .pagination {
     position: absolute;
 
-    bottom: 82px;
-    right: 0;
+    bottom: 13px;
+    right: 50px;
   }
 
+  .pagination__button {
+    width: 87px;
+    border: none;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
 }
 
 @media ($desktop-widths) {
   .pagination {
-    bottom: 130px;
+    bottom: 60px;
   }
 }

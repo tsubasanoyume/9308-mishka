@@ -1,29 +1,124 @@
 .features-list {
-  @include font-style();
+  @include font-style(17px, 20px);
 
   list-style: none;
+
+  margin-bottom: 25px;
 }
 
 .features-list__item {
-  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 
-  margin-bottom: 15px;
+  margin-top: 32px;
+
+  &--flower .features-list__item-icon-container,
+  &--heart .features-list__item-icon-container {
+    padding-left: 7px;
+  }
+
+  &--money,
+  &--heart {
+    padding-bottom: 3px;
+  }
+
+  &--money .features-list__item-icon-container {
+    margin-bottom: 7px;
+  }
+
+  &--yarn .features-list__item-icon-container {
+    padding-left: 4px;
+  }
+
+  &--rocket .features-list__item-icon-container {
+    margin-left: -5px;
+    margin-bottom: 9px;
+  }
+
+  &--present .features-list__item-icon-container {
+    padding-left: 3px;
+  }
+}
+
+.features-list__item-icon {
+  fill: $color-light-green;
 }
 
 @media ($tablet-widths) {
   .features-list {
     display: flex;
+
+    margin-bottom: 55px;
+  }
+
+  .features-list__left,
+  .features-list__right {
+    width: 50%;
   }
 
   .features-list__item {
     @include font-resize(20px);
 
-    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &--flower {
+      padding-bottom: 7px;
+    }
+
+    &--flower .features-list__item-icon-container,
+    &--heart .features-list__item-icon-container {
+      padding-left: 10px;
+    }
+
+    &--flower .features-list__item-text {
+      margin-top: 12px;
+    }
+
+    &--yarn {
+      padding-bottom: 10px;
+    }
+
+    &--yarn .features-list__item-text {
+      margin-top: 15px;
+    }
   }
 }
 
 @media ($desktop-widths) {
+  .features-list__left,
+  .features-list__right {
+    width: 40%;
+  }
+
   .features-list__item {
-    width: 350px;
+
+    &--flower {
+      padding-bottom: 7px;
+    }
+
+    &--flower .features-list__item-icon-container,
+    &--heart .features-list__item-icon-container {
+      padding-left: 10px;
+    }
+
+    &--flower .features-list__item-text {
+      margin-top: 18px;
+    }
+
+    &--money {
+      padding-bottom: 10px;
+    }
+
+    &--money .features-list__item-text {
+      margin-top: 15px;
+    }
+
+    &--yarn {
+      padding-bottom: 10px;
+    }
+
+    &--yarn .features-list__item-icon-container {
+      padding-top: 5px;
+    }
   }
 }

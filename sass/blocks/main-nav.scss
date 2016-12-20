@@ -8,6 +8,7 @@
 
 .main-nav__list-link {
   @include font-style(19px, 24px);
+  position: relative;
 
   display: block;
   min-height: 53px;
@@ -16,7 +17,7 @@
   color: #fff;
 
   &--interior {
-    background: $color-light-green;
+    background-color: $color-light-green;
 
     &:active {
       color: $color-green-interior;
@@ -24,22 +25,36 @@
   }
 
   &--toys {
-    background: $color-green;
+    background-color: $color-green;
 
     &:active {
       color: $color-green-toy;
     }
   }
-
-
 }
+
+.main-nav__list-link__icon-container {
+    position: absolute;
+
+    top: 23px;
+    right: 35px;
+
+    &--toy {
+      top: 20px;
+      right: 25px;
+    }
+  }
+
+  .main-nav__list-link__icon {
+    fill: $color-icons-nav;
+  }
 
 @media ($tablet-widths) {
 
   .main-nav {
     display: flex;
     margin: 0;
-    margin-top: -104px;
+    margin-top: -124px;
   }
 
   .main-nav__list {
@@ -53,7 +68,16 @@
 
   .main-nav__list-link {
     @include font-resize(20px, 30px);
-    padding: 30px 35px;
+    padding: 25px 35px 35px;
+  }
+
+  .main-nav__list-link__icon-container {
+    top: 30px;
+
+    &--toy {
+      top: 32px;
+      right: 33px;
+    }
   }
 
 }
