@@ -14,6 +14,8 @@ var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -59,6 +61,13 @@ gulp.task("symbols", function () {
     .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("js", function() {
+  gulp.src("build/js/*.js")
+    .pipe(concat("app.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("clean", function() {
   return del("build");
 });
@@ -95,6 +104,7 @@ gulp.task("build", function(fn) {
     "style",
     "images",
     "symbols",
+    "js",
     fn
   );
 });
