@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
 
@@ -18,7 +18,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" class="menu-list__logo-image">
+              <img src="img/logo-mobile.svg" class="menu-list__logo-image" alt="Мимишка" width="85" height="35">
             </picture>
           </li>
           <li class="menu-list__item menu-list__item--catalog">
@@ -29,7 +29,7 @@
           </li>
           <li class="menu-list__item menu-list__item--search">
             <a href="#" class="menu-list__link menu-list__link--search">
-              <svg class="menu-list__icon-container menu-list__icon-container--search" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6">
+              <svg class="menu-list__icon-container menu-list__icon-container--search" x="0" y="0" width="17.6" height="17.6" viewBox="-0.8 -0.8 17.6 17.6">
                 <use xlink:href="#icon-search" class="menu-list__icon"></use>
               </svg>
               <span class="menu-list__link-text">Поиск по сайту</span>
@@ -38,7 +38,7 @@
           </li>
           <li class="menu-list__item menu-list__item--basket">
             <a href="#" class="menu-list__link menu-list__link--basket">
-              <svg class="menu-list__icon-container" x="0px" y="0px" width="20.294px" height="18.849px">
+              <svg class="menu-list__icon-container" x="0" y="0" width="20.294" height="18.849">
                 <use xlink:href="#icon-cart" class="menu-list__icon"></use>
               </svg>
               <span class="menu-list__link-text">Корзина: пока пуста</span>
@@ -62,11 +62,12 @@
         <h1 class="main-header__title">Милые штуки ручной работы для дома</h1>
       </section>
       <section class="main-nav">
+        <h2 class="hidden">Навигация</h2>
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
             <a href="#" class="main-nav__list-link main-nav__list-link--interior">
               Предметы<br>интерьера
-              <svg class="main-nav__list-link__icon-container" x="0px" y="0px" width="40.219px" height="62.411px">
+              <svg class="main-nav__list-link__icon-container" x="0" y="0" width="40.219" height="62.411">
                 <use xlink:href="#icon-interior" class="main-nav__list-link__icon"></use>
               </svg>
             </a>
@@ -74,7 +75,7 @@
           <li class="main-nav__list-item">
             <a href="#" class="main-nav__list-link main-nav__list-link--toys">
               Детские<br>игрушки
-              <svg class="main-nav__list-link__icon-container main-nav__list-link__icon-container--toy" x="0px" y="0px" width="60px" height="59.62px">
+              <svg class="main-nav__list-link__icon-container main-nav__list-link__icon-container--toy" x="0" y="0" width="60" height="59.62">
                 <use xlink:href="#icon-toy" class="main-nav__list-link__icon"></use>
               </svg>
             </a>
@@ -101,79 +102,57 @@
         </table>
         <figure class="main-week-product__image-container">
           <picture>
-            <source media="(min-width: 1150px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx)" srcset="img/triple-set-desktop@2x.jpg">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx)" srcset="img/triple-set-tablet@2x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-            <source media="(min-width: 320px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx)" srcset="img/triple-set-mobile@2x.jpg">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" class="main-week-product__image">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" class="main-week-product__image">
           </picture>
         </figure>
         <span class="main-week-product__price">Цена: 990 руб.</span>
         <a href="#" class="btn btn--order">Заказать</a>
-
-        <div class="basket-modal hidden-modal">
-          <h2 class="basket-modal__title">Добавить в корзину</h2>
-          <p class="basket-modal__text">Выберите размер:</p>
-          <form action="/echo" method="post" class="basket-modal__form">
-            <div class="basket-modal__fields">
-              <input type="radio" name="size" id="small" class="hidden" value="small" checked>
-              <label for="small" class="basket-modal__label-size">S</label>
-              <input type="radio" name="size" id="medium" class="hidden" value="medium">
-              <label for="medium" class="basket-modal__label-size">M</label>
-              <input type="radio" name="size" id="large" class="hidden" value="large">
-              <label for="large" class="basket-modal__label-size">L</label>
-            </div>
-            <input type="submit" class="btn btn--basket" value="Добавить">
-          </form>
-        </div>
       </section>
       <section class="main-about-us">
         <h2 class="main-about-us__title">Коротко о нас:</h2>
         <ul class="features-list">
-          <div class="features-list__left">
-            <li class="features-list__item features-list__item--flower">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="31.972px" height="37.301px">
+          <li class="features-list__left">
+            <div class="features-list__item features-list__item--flower">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="31.972" height="37.301">
                 <use xlink:href="#icon-feature-1" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Экологически чистые материалы</p>
-            </li>
-            <li class="features-list__item features-list__item--money">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="46.575px" height="27.332px">
+            </div>
+            <div class="features-list__item features-list__item--money">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="46.575" height="27.332">
                 <use xlink:href="#icon-feature-3" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Скандинавский стиль по российской цене</p>
-            </li>
-            <li class="features-list__item features-list__item--heart">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="33.05px" height="27.857px">
+            </div>
+            <div class="features-list__item features-list__item--heart">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="33.05" height="27.857">
                 <use xlink:href="#icon-feature-5" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Увеличивает лайки на фотографиях</p>
-            </li>
-          </div>
-          <div class="features-list__right">
-            <li class="features-list__item features-list__item--yarn">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="34.373px" height="34.373px">
+            </div>
+          </li>
+          <li class="features-list__right">
+            <div class="features-list__item features-list__item--yarn">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="34.373" height="34.373">
                 <use xlink:href="#icon-feature-2" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Связано вручную с любовью и умилением</p>
-            </li>
-            <li class="features-list__item features-list__item--rocket">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="54.156px" height="23.183px" viewBox="612.532 500.386 54.156 23.183">
-                <g class="features-list__item-icon">
-                  <path d="M652.844,506.098c-3.647-0.971-7.839-1.667-12.359-1.666c-2.891,0.001-5.457,0.243-7.71,0.623l-6.784-4.668l-13.456,0.005 l5.811,6.184h8.447c-4.58,1.598-6.759,3.515-6.759,3.515l0.002,3.777c0,0,2.313,1.912,6.931,3.518l-8.623-0.005l-5.811,6.188 l13.455,0.002l6.816-4.692c2.261,0.398,4.822,0.647,7.681,0.648c4.522-0.001,8.712-0.697,12.36-1.667 c-1.176-1.775-1.915-3.743-1.918-5.877C650.93,509.842,651.665,507.871,652.844,506.098z"/>
-                  <path d="M656.267,507.132c-1.284,1.605-1.969,3.25-1.965,4.84c-0.007,1.597,0.677,3.238,1.968,4.847 c6.399-2.162,10.419-4.841,10.419-4.841S662.67,509.298,656.267,507.132z"/>
-                </g>
+            </div>
+            <div class="features-list__item features-list__item--rocket">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="54.156" height="23.183">
+                <use xlink:href="#icon-feature-4" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Поддержка отечественного производителя</p>
-            </li>
-            <li class="features-list__item features-list__item--present">
-              <svg class="features-list__item-icon-container" x="0px" y="0px" width="32.666px" height="32.486px">
+            </div>
+            <div class="features-list__item features-list__item--present">
+              <svg class="features-list__item-icon-container" x="0" y="0" width="32.666" height="32.486">
                 <use xlink:href="#icon-feature-6" class="features-list__item-icon"></use>
               </svg>
               <p class="features-list__item-text">Поставляется в подарочной упаковке</p>
-            </li>
-          </div>
+            </div>
+          </li>
         </ul>
       </section>
       <section class="main-reviews">
@@ -200,7 +179,7 @@
           </tr>
           <tr class="main-contacts__item--right">
             <td class="main-contacts__value">адрес:</td>
-            <td class="main-contacts__field main-contacts__field--address">г. Санкт-Петербург, ул. Большая <br>Конюшенная, д. 19/8, офис 101</td>
+            <td class="main-contacts__field main-contacts__field--address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
           </tr>
         </table>
         <div class="main-contacts__map">
@@ -210,29 +189,45 @@
       </section>
     </main>
 
+    <div class="basket-modal hidden-modal">
+      <h2 class="basket-modal__title">Добавить в корзину</h2>
+      <p class="basket-modal__text">Выберите размер:</p>
+      <form action="/echo" method="post" class="basket-modal__form">
+        <div class="basket-modal__fields">
+          <input type="radio" name="size" id="small" class="hidden" value="small" checked>
+          <label for="small" class="basket-modal__label-size">S</label>
+          <input type="radio" name="size" id="medium" class="hidden" value="medium">
+          <label for="medium" class="basket-modal__label-size">M</label>
+          <input type="radio" name="size" id="large" class="hidden" value="large">
+          <label for="large" class="basket-modal__label-size">L</label>
+        </div>
+        <input type="submit" class="btn btn--basket" value="Добавить">
+      </form>
+    </div>
+
     <footer class="page-footer page-wrapper">
       <div class="page-footer__logo">
         <a href="index.html" class="page-footer__logo-link">
-          <svg class="page-footer__icon-container" x="0px" y="0px" width="101.615px" height="34.056px">
+          <svg class="page-footer__icon-container" x="0" y="0" width="101.615" height="34.056">
             <use xlink:href="#logo-footer" class="page-footer__icon"></use>
           </svg>
         </a>
       </div>
       <div class="page-footer__social">
         <a href="#" class="social social--inst">
-          <svg class="social__icon-container" x="0px" y="0px" width="21.769px" height="21.334px">
+          <svg class="social__icon-container" x="0" y="0" width="21.769" height="21.334">
             <use xlink:href="#icon-insta" class="social__icon"></use>
           </svg>
           Instagram
         </a>
         <a href="#" class="social social--fb">
-          <svg class="social__icon-container" x="0px" y="0px" width="14.962px" height="27.718px">
+          <svg class="social__icon-container" x="0" y="0" width="14.962" height="27.718">
             <use xlink:href="#icon-fb" class="social__icon"></use>
           </svg>
           Facebook
         </a>
         <a href="#" class="social social--tw">
-          <svg class="social__icon-container" x="0px" y="0px" width="23.494px" height="20.168px">
+          <svg class="social__icon-container" x="0" y="0" width="23.494" height="20.168">
             <use xlink:href="#icon-twitter" class="social__icon"></use>
           </svg>
           Twitter
@@ -242,7 +237,7 @@
         <a href="#" class="page-footer__maker-link">
           <span class="page-footer__maker-text">Разработано</span>
           <span class="page-footer__maker-link-text">HTMLAcademy</span>
-          <svg class="page-footer__maker-logo-container" x="0px" y="0px" width="26.943px" height="34.09px">
+          <svg class="page-footer__maker-logo-container" x="0" y="0" width="26.943" height="34.09">
             <use xlink:href="#logo-htmlacademy" class="page-footer__maker-logo"></use>
           </svg>
         </a>
@@ -250,8 +245,6 @@
     </footer>
 
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    </script>
+    <script type="text/javascript" src="js/app.min.js"></script>
   </body>
 </html>

@@ -277,6 +277,11 @@
       margin-top: -10px;
     }
   }
+
+  .menu-list__logo-image {
+    width: 112.389px;
+    height: 46.087px;
+  }
 }
 
 @media ($desktop-widths) {
@@ -399,5 +404,10 @@
       left: 0;
       margin-top: -10px;
     }
+  }
+
+  .menu-list__logo-image {
+    width: 148.051px;
+    height: 72.707px;
   }
 }
