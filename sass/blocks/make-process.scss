@@ -16,7 +16,7 @@
   @include font-resize(13px, 24px);
 
   margin-top: -7px;
-  padding: 26px 34px 30px;
+  padding: 34px 34px 31px;
 
   border: 1px solid $main-color-border;
   border-top: none;
@@ -28,6 +28,8 @@
 }
 
 .make-process__image {
+  width: 260px;
+  height: 150px;
   position: relative;
 
   &:after {
@@ -39,8 +41,8 @@
     height: 80px;
     top: 50%;
     left: 50%;
-    margin-left: -50px;
-    margin-top: -40px;
+    margin-left: -51px;
+    margin-top: -35px;
 
     background-image: url("../img/icon-play.svg");
     background-repeat: no-repeat;
@@ -69,12 +71,14 @@
   }
 
   .make-process__image {
+    width: 668px;
+    height: 455px;
     margin: 0;
 
     order: -1;
 
     &:after {
-      margin-top: -35px;
+      margin-top: -31px;
     }
   }
 
@@ -142,6 +146,8 @@
   }
 
   .make-process__image {
+    width: 681px;
+    height: 456px;
     position: absolute;
 
     left: 0;

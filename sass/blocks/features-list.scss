@@ -74,6 +74,26 @@
       margin-top: 12px;
     }
 
+    &--money .features-list__item-text {
+      margin-top: 16px;
+    }
+
+    &--heart {
+      margin-top: 60px;
+    }
+
+    &--heart .features-list__item-text {
+      margin-top: 16px;
+    }
+
+    &--rocket .features-list__item-text {
+      margin-top: 16px;
+    }
+
+    &--present {
+      margin-top: 55px;
+    }
+
     &--yarn {
       padding-bottom: 10px;
     }
@@ -113,12 +133,24 @@
       margin-top: 15px;
     }
 
+    &--heart {
+      margin-top: 50px;
+    }
+
     &--yarn {
       padding-bottom: 10px;
     }
 
     &--yarn .features-list__item-icon-container {
       padding-top: 5px;
+    }
+
+    &--rocket .features-list__item-text {
+      margin-top: 15px;
+    }
+
+    &--present {
+      margin-top: 55px;
     }
   }
 }

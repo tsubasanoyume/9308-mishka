@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Мишка - Вязание на заказ</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
 
   <body>
@@ -68,12 +68,12 @@
           мы свяжемся с вами, чтобы уточнить детали.
         </p>
         <div class="order-form__filters">
-          <span class="order-form__title">Тип</span>
+          <span class="order-form__title order-form__title--type">Тип</span>
           <div class="order-form__fields">
             <input type="radio" name="type" id="accessory" class="hidden" value="accessory" checked>
-            <label for="accessory" class="order-form__type-radio">Аксессуары для интерьера</label>
+            <label for="accessory" class="order-form__type-radio">Аксессуар для интерьера</label>
             <input type="radio" name="type" id="toys" class="hidden" value="toys">
-            <label for="toys" class="order-form__type-radio">Детская игрушка</label>
+            <label for="toys" class="order-form__type-radio order-form__type-radio--toy">Детская игрушка</label>
           </div>
         </div>
         <div class="order-form__filters order-form__filters--bg">
@@ -111,14 +111,14 @@
           </div>
         </div>
         <div class="order-form__filters order-form__filters--bg">
-          <div class="order-form__field--contact">
+          <div class="order-form__fields--contact">
             <label class="order-form__title" for="phone">Тел</label>
             <input type="tel" name="phone" class="order-form__field order-form__field--contact" id="phone" placeholder="+7 XXX XX XX*" required>
             <svg class="order-form__icon-container" height="27" width="27">
               <use xlink:href="#icon-phone" class="order-form__icon"></use>
             </svg>
           </div>
-          <div class="order-form__field--contact">
+          <div class="order-form__fields--contact">
             <label class="order-form__title" for="email">E-mail</label>
             <input type="email" name="email" class="order-form__field order-form__field--contact" id="email" placeholder="Ваш Email*" required>
             <svg class="order-form__icon-container order-form__icon-container--email" height="32" width="32">
@@ -177,7 +177,7 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
   </body>
 
 </html>

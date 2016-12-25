@@ -2,12 +2,30 @@
   padding: 28px 0 40px;
 
   position: relative;
+
+  &:after {
+    content: "";
+
+    display: block;
+    width: 320px;
+    height: 23px;
+    margin: 0 -30px;
+
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .main-week-product__title {
   @include font-style(25px, 30px);
   margin: 0 0 2px;
-  padding-left: -5px;
 }
 
 .main-week-product__mark {
@@ -38,23 +56,15 @@
 @media ($tablet-widths) {
 
   .main-week-product {
-    padding-top: 45px;
+    padding-top: 43px;
     padding-bottom: 55px;
 
     &:after {
-      content: "";
-
-      display: block;
-      width: calc(100% + 120px);
+      width: 768px;
       height: 23px;
 
-      position: absolute;
-      bottom: -20px;
-      left: -50px;
-
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
+      bottom: -18px;
+      margin: 0 -50px;
     }
   }
 
@@ -62,6 +72,7 @@
     @include font-resize(43px, 50px);
 
     margin-bottom: 50px;
+    margin-left: -4px;
   }
 
   .main-week-product__mark {
@@ -105,22 +116,13 @@
 @media ($desktop-widths) {
 
   .main-week-product {
-    padding: 120px 0 80px 175px;
+    padding: 125px 0 80px 175px;
 
     &:after {
-      content: "";
+      width: 1150px;
+      height: 28px;
 
-      display: block;
-      width: calc(100% + 100px);
-      height: 23px;
-
-      position: absolute;
       bottom: -17px;
-      left: -50px;
-
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
     }
   }
 
