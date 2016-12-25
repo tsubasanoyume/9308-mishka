@@ -1,7 +1,13 @@
 .page-header {
   position: relative;
 
-  min-height: 82px;
+  min-height: 79px;
 
   border-bottom: 1px solid $main-color-border;
+}
+
+@media ($tablet-widths) {
+  .page-header {
+    min-height: 89px;
+  }
 }

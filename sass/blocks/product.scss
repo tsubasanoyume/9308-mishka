@@ -12,7 +12,7 @@
 
 .product__title {
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .product__title-link {
@@ -58,11 +58,6 @@
 .product__image {
   width: 260px;
   height: 196px;
-}
-
-.make-process__image {
-  width: 260px;
-  height: 150px;
 }
 
 @media ($tablet-widths) {
@@ -124,11 +119,6 @@
     width: 334px;
     height: 334px;
   }
-
-  .make-process__image {
-    width: 668px;
-    height: 455px;
-  }
 }
 
 @media ($desktop-widths) {
@@ -182,8 +172,7 @@
     height: 462px;
   }
 
-  .make-process__image {
-    width: 681px;
-    height: 456px;
+  .product__price {
+    margin-left: 0;
   }
 }

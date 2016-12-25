@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>HTML Academy: Мишка - Каталог</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>HTML Academy: Мишка - Вязание на заказ</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
 
   <body>
@@ -20,7 +20,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" class="menu-list__logo-image">
+                <img src="img/logo-mobile.svg" class="menu-list__logo-image" alt="Мимишка" width="85" height="35">
               </picture>
             </a>
           </li>
@@ -32,7 +32,7 @@
           </li>
           <li class="menu-list__item menu-list__item--search">
             <a href="#" class="menu-list__link menu-list__link--search">
-              <svg class="menu-list__icon-container menu-list__icon-container--search" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6">
+              <svg class="menu-list__icon-container menu-list__icon-container--search" x="0" y="0" width="17.6" height="17.6" viewBox="-0.8 -0.8 17.6 17.6">
                 <use xlink:href="#icon-search" class="menu-list__icon"></use>
               </svg>
               <span class="menu-list__link-text">Поиск по сайту</span>
@@ -41,7 +41,7 @@
           </li>
           <li class="menu-list__item menu-list__item--basket">
             <a href="#" class="menu-list__link menu-list__link--basket">
-              <svg class="menu-list__icon-container" x="0px" y="0px" width="20.294px" height="18.849px">
+              <svg class="menu-list__icon-container" x="0" y="0" width="20.294" height="18.849">
                 <use xlink:href="#icon-cart" class="menu-list__icon"></use>
               </svg>
               <span class="menu-list__link-text">Корзина: пока пуста</span>
@@ -68,12 +68,12 @@
           мы свяжемся с вами, чтобы уточнить детали.
         </p>
         <div class="order-form__filters">
-          <span class="order-form__title">Тип</span>
+          <span class="order-form__title order-form__title--type">Тип</span>
           <div class="order-form__fields">
             <input type="radio" name="type" id="accessory" class="hidden" value="accessory" checked>
-            <label for="accessory" class="order-form__type-radio">Аксессуары для интерьера</label>
+            <label for="accessory" class="order-form__type-radio">Аксессуар для интерьера</label>
             <input type="radio" name="type" id="toys" class="hidden" value="toys">
-            <label for="toys" class="order-form__type-radio">Детская игрушка</label>
+            <label for="toys" class="order-form__type-radio order-form__type-radio--toy">Детская игрушка</label>
           </div>
         </div>
         <div class="order-form__filters order-form__filters--bg">
@@ -111,14 +111,14 @@
           </div>
         </div>
         <div class="order-form__filters order-form__filters--bg">
-          <div class="order-form__field--contact">
+          <div class="order-form__fields--contact">
             <label class="order-form__title" for="phone">Тел</label>
             <input type="tel" name="phone" class="order-form__field order-form__field--contact" id="phone" placeholder="+7 XXX XX XX*" required>
             <svg class="order-form__icon-container" height="27" width="27">
               <use xlink:href="#icon-phone" class="order-form__icon"></use>
             </svg>
           </div>
-          <div class="order-form__field--contact">
+          <div class="order-form__fields--contact">
             <label class="order-form__title" for="email">E-mail</label>
             <input type="email" name="email" class="order-form__field order-form__field--contact" id="email" placeholder="Ваш Email*" required>
             <svg class="order-form__icon-container order-form__icon-container--email" height="32" width="32">
@@ -141,26 +141,26 @@
     <footer class="page-footer page-wrapper">
       <div class="page-footer__logo">
         <a href="index.html" class="page-footer__logo-link">
-          <svg class="page-footer__icon-container" x="0px" y="0px" width="101.615px" height="34.056px">
+          <svg class="page-footer__icon-container" x="0" y="0" width="101.615" height="34.056">
             <use xlink:href="#logo-footer" class="page-footer__icon"></use>
           </svg>
         </a>
       </div>
       <div class="page-footer__social">
         <a href="#" class="social social--inst">
-          <svg class="social__icon-container" x="0px" y="0px" width="21.769px" height="21.334px">
+          <svg class="social__icon-container" x="0" y="0" width="21.769" height="21.334">
             <use xlink:href="#icon-insta" class="social__icon"></use>
           </svg>
           Instagram
         </a>
         <a href="#" class="social social--fb">
-          <svg class="social__icon-container" x="0px" y="0px" width="14.962px" height="27.718px">
+          <svg class="social__icon-container" x="0" y="0" width="14.962" height="27.718">
             <use xlink:href="#icon-fb" class="social__icon"></use>
           </svg>
           Facebook
         </a>
         <a href="#" class="social social--tw">
-          <svg class="social__icon-container" x="0px" y="0px" width="23.494px" height="20.168px">
+          <svg class="social__icon-container" x="0" y="0" width="23.494" height="20.168">
             <use xlink:href="#icon-twitter" class="social__icon"></use>
           </svg>
           Twitter
@@ -170,14 +170,14 @@
         <a href="#" class="page-footer__maker-link">
           <span class="page-footer__maker-text">Разработано</span>
           <span class="page-footer__maker-link-text">HTMLAcademy</span>
-          <svg class="page-footer__maker-logo-container" x="0px" y="0px" width="26.943px" height="34.09px">
+          <svg class="page-footer__maker-logo-container" x="0" y="0" width="26.943" height="34.09">
             <use xlink:href="#logo-htmlacademy" class="page-footer__maker-logo"></use>
           </svg>
         </a>
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
   </body>
 
 </html>

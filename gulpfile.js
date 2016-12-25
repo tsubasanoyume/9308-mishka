@@ -62,7 +62,7 @@ gulp.task("symbols", function () {
 });
 
 gulp.task("js", function() {
-  gulp.src("build/js/*.js")
+  gulp.src("js/*.js")
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js"));
@@ -74,9 +74,8 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-      "fonts/**/*.{ woff, woff2 }",
+      "fonts/**/*.{woff,woff2}",
       "img/**",
-      "js/**",
       "*.html"
     ], {
       base: "."
@@ -86,7 +85,7 @@ gulp.task("copy", function() {
 
 gulp.task("serve", function() {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
     cors: true,

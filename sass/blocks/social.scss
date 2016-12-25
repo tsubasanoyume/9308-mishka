@@ -3,10 +3,27 @@
   display: block;
   height: 30px;
   width: 30px;
+  margin-right: 10px;
 
   &--inst,
   &--tw {
     padding-top: 5px;
+  }
+
+  &--fb {
+    margin-left: 22px;
+    margin-right: 25px;
+  }
+}
+
+@media ($tablet-widths) {
+  .social {
+    margin: 0;
+  }
+
+  .social--fb {
+    margin-left: 26px;
+    margin-right: 32px;
   }
 }
 

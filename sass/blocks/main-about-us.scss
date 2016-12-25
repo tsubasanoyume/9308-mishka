@@ -1,6 +1,6 @@
 .main-about-us {
   padding-top: 30px;
-  padding-bottom: 35px;
+  padding-bottom: 32px;
 }
 
 .main-about-us__title {
@@ -15,11 +15,13 @@
 @media ($tablet-widths) {
   .main-about-us {
     padding-top: 63px;
-    padding-bottom: 27px;
+    padding-bottom: 24px;
   }
 
   .main-about-us__title {
     @include font-resize(43px, 50px);
+
+    margin-left: -3px;
   }
 }
 
@@ -27,10 +29,14 @@
   .main-about-us {
     padding-top: 72px;
     padding-left: 175px;
-    padding-bottom: 33px;
+    padding-bottom: 31px;
   }
 
   .main-about-us__title {
     @include font-resize(53px, 57px);
+
+    margin-left: -3px;
+    margin-top: 3px;
+    margin-bottom: -3px;
   }
 }

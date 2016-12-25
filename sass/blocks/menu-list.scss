@@ -10,7 +10,7 @@
   list-style: none;
 
   position: absolute;
-  top: 84px;
+  top: 80px;
   width: 320px;
   background: #fff;
 }
@@ -43,7 +43,7 @@
   height: 20px;
   padding: 0;
 
-  top: 30px;
+  top: 28px;
   right: 32px;
 
   cursor: pointer;
@@ -189,7 +189,7 @@
       width: 320px;
       text-align: left;
       margin-left: 0;
-      padding-top: 18px;
+      padding-top: 23px;
       padding-bottom: 7px;
 
       position: static;
@@ -197,7 +197,7 @@
 
     &--search {
       order: 0;
-      width: 20px;
+      width: 23px;
 
       border-left: 1px solid $main-color-border;
       border-right: 1px solid $main-color-border;
@@ -208,7 +208,7 @@
       width: auto;
 
       padding-right: 0;
-      padding-left: 35px;
+      padding-left: 30px;
     }
 
     &--catalog {
@@ -229,7 +229,7 @@
       order: 1;
       z-index: 2;
 
-      padding: 18px 0;
+      padding: 16px 0;
       margin-left: auto;
     }
 
@@ -246,47 +246,60 @@
     @include font-resize(15px, 24px);
 
     margin: 0;
-    padding-top: 18px;
+    padding-top: 16px;
   }
 
   .menu-list__link--form {
     @include font-resize(15px, 24px);
 
     margin: 0;
-    padding: 18px 3px;
+    padding: 16px 5px;
   }
 
   .menu-list__link--search {
     margin: 0;
     font-size: 0;
 
-    padding-top: 27px;
+    padding-top: 32px;
     padding-bottom: 34px;
   }
 
   .menu-list__link--basket {
-    padding-top: 27px;
-    margin-left: 49px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+
+  .menu-list__link--basket .menu-list__link-text {
+    // margin-left: 2px;
   }
 
   .menu-list__icon-container {
-    left: -50px;
+    left: -48px;
 
     &--search {
       left: 4px;
       margin-top: -10px;
     }
   }
+
+  .menu-list__logo-image {
+    width: 112.389px;
+    height: 46.087px;
+  }
 }
 
 @media ($desktop-widths) {
+  .menu-list {
+    max-height: 89px;
+  }
+
   .menu-list__item {
     &--logo {
       order: 1;
 
       width: auto;
-      margin-right: auto;
-      padding-top: 5px;
+      margin-right: 103px;
+      padding-top: 10px;
       padding-bottom: 0;
 
       &:hover {
@@ -317,7 +330,7 @@
       order: 0;
 
       padding: 0 30px;
-      margin-right: 45px;
+      margin-right: 40px;
     }
 
     &--delivery {
@@ -354,28 +367,41 @@
     @include font-resize(15px);
     margin: 0;
 
-    padding: 18px 0;
+    padding: 16px 0;
 
     &:hover {
       opacity: .6;
     }
+  }
+
+  .menu-list__link--basket .menu-list__link-text {
+    margin-left: 5px;
   }
 
   .menu-list__link--sale {
     @include font-resize(15px);
     margin: 0;
 
-    padding: 18px 0;
+    padding: 16px 0;
 
     &:hover {
       opacity: .6;
     }
   }
 
+  .menu-list__item--delivery {
+    padding: 16px 0;
+  }
+
+  .menu-list__link--basket{
+    padding-top: 30px;
+    margin-left: 45px;
+  }
+
   .menu-list__link--catalog {
     @include font-resize();
 
-    padding-top: 27px;
+    padding-top: 30px;
 
     &:hover {
       opacity: .6;
@@ -385,7 +411,7 @@
   .menu-list__link--form {
     @include font-resize();
 
-    padding-top: 27px;
+    padding-top: 30px;
 
     &:hover {
       opacity: .6;
@@ -393,11 +419,16 @@
   }
 
   .menu-list__icon-container {
-    left: -53px;
+    left: -45px;
 
     &--search {
       left: 0;
       margin-top: -10px;
     }
+  }
+
+  .menu-list__logo-image {
+    width: 148.051px;
+    height: 72.707px;
   }
 }

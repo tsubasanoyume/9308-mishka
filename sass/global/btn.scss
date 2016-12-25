@@ -38,23 +38,33 @@
 
   &--order {
     @media ($tablet-widths) {
-      width: 290px;
+      width: 288px;
+      margin-left: -2px;
+    }
+
+    @media ($desktop-widths) {
+      width: 288px;
+      padding-top: 14px;
     }
   }
 
   &--reviews {
+    padding-top: 15px;
+    padding-bottom: 17px;
+
     @media ($tablet-widths) {
       width: 172px;
 
       position: absolute;
-      top: 80px;
-      right: 50px;
+      top: 79px;
+      right: 49px;
     }
   }
 
   &--write {
     @media ($tablet-widths) {
-      width: 230px;
+      width: 226px;
+      padding-top: 15px;
 
       margin: 0 auto;
     }
@@ -78,8 +88,14 @@
   }
 
   &--make {
+    padding-bottom: 15px;
+
+    @media ($tablet-widths) {
+      padding-bottom: 15px;
+    }
+
     @media ($desktop-widths) {
-      width: 230px;
+      width: 225px;
     }
   }
 }

@@ -1,6 +1,25 @@
 .main-reviews {
   position: relative;
   padding-bottom: 45px;
+
+  &:after {
+    content: "";
+
+    display: block;
+    width: 320px;
+    height: 23px;
+    margin: 0 -30px;
+
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .main-reviews__title {
@@ -11,11 +30,11 @@
 .main-reviews__text {
   line-height: 30px;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .main-reviews__author {
-  @include font-style(18px, 24px);
+  @include font-style(17px, 24px);
 
   display: block;
 }
@@ -24,7 +43,8 @@
   @include font-resize(18px, 30px);
 
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  margin-top: 3px;
 }
 
 @media ($tablet-widths) {
@@ -35,40 +55,35 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: contain;
+    // background-size: contain;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/review@2x.jpg");
     }
 
     &:after {
-      content: "";
-
-      display: block;
-      width: 100%;
+      width: 768px;
       height: 23px;
 
-      position: absolute;
       bottom: -85px;
-      left: 0;
-      right: 0;
-
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-size: 110%;
-      background-position: center;
-      background-repeat: no-repeat;
+      margin-left: 0;
     }
   }
 
   .main-reviews__title {
     @include font-resize(43px, 50px);
     margin-bottom: 50px;
+    margin-left: -4px;
   }
 
   .main-reviews__text {
     @include font-resize(17px, 30px);
 
     margin-bottom: 60px;
+  }
+
+  .main-reviews__username {
+    margin-top: 0;
   }
 }
 
@@ -82,9 +97,10 @@
     background-position: 50px 0;
 
     &:after {
+      width: 1150px;
       height: 30px;
 
-      bottom: -90px;
+      bottom: -80px;
     }
   }
 
@@ -92,9 +108,14 @@
     @include font-resize(53px, 57px);
 
     margin-bottom: 50px;
+    margin-left: -3px;
   }
 
   .main-reviews__text {
     margin-bottom: 40px;
+  }
+
+  .main-reviews__username {
+    margin-top: 3px;
   }
 }

@@ -68,7 +68,7 @@
 
   .main-nav__list-link {
     @include font-resize(20px, 30px);
-    padding: 25px 35px 35px;
+    padding: 28px 35px 35px;
   }
 
   .main-nav__list-link__icon-container {
@@ -84,7 +84,7 @@
 
 @media ($desktop-widths) {
   .main-nav__list-link {
-    padding: 30px 40px;
+    padding: 27px 37px 30px;
 
     &:hover {
       margin-top: -5px;
