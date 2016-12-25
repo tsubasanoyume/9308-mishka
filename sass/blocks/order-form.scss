@@ -97,7 +97,7 @@ input[type="radio"]:checked + .order-form__type-radio:after {
   display: block;
   padding: 15px 0;
   margin-left: 62px;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   position: relative;
 
   &:before {
@@ -167,7 +167,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
 }
 
 .order-form__field--contact {
-  padding-top: 25px;
+  padding-top: 23px;
   margin-bottom: 15px;
 }
 
@@ -218,7 +218,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
 @media ($tablet-widths) {
   .order-form {
     padding-top: 73px;
-    padding-bottom: 47px;
+    padding-bottom: 50px;
   }
 
   .order-form__description {
@@ -238,6 +238,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
 
       margin: 0 -50px;
       padding-left: 50px;
+      padding-top: 47px;
     }
   }
 
@@ -268,7 +269,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
 
     &:before {
       width: 50px;
-      height: 50px;
+      height: 48px;
 
       left: -80px;
       top: 0;
@@ -292,7 +293,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
     }
 
     &--toy:before {
-      top: 5px;
+      top: 2px;
     }
   }
 
@@ -321,13 +322,13 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
   .order-form__fields--name {
     display: flex;
     flex-direction: column;
+    margin-bottom: -2px;
   }
 
   .order-form__fields--contact {
     display: flex;
     width: 100%;
-    margin-bottom: 18px;
-    margin-top: 0;
+    margin-bottom: 9px;
 
     &:last-child {
       margin-bottom: 10px;
@@ -337,7 +338,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
   .order-form__field {
     padding-left: 15px;
 
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     margin-left: 25px;
     width: 100%;
     box-sizing: border-box;
@@ -374,6 +375,7 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
 
   .order-form__filters--comment {
     margin-top: 0;
+    padding-bottom: 25px;
   }
 
   .order-form__comment-textfield {
@@ -469,13 +471,15 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
     width: 21%;
 
     &:before {
-      top: 2px;
+      top: 0;
     }
   }
 
   .order-form__field {
     width: 100%;
     margin-right: 175px;
+    padding-top: 12px;
+    margin-bottom: 28px;
 
     &:hover {
       border-bottom-color: $color-light-green;
@@ -483,11 +487,12 @@ input[type="checkbox"]:checked + .order-form__color-checkbox:before {
   }
 
   .order-form__text {
-    margin-left: 0;
+    margin-top: 12px;
+    margin-left: 2px;
   }
 
   .order-form__fields--contact {
-    margin-bottom: 23px;
+    margin-bottom: 16px;
   }
 
   .order-form__fields--contact:first-child {

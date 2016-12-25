@@ -71,7 +71,7 @@
   .main-week-product__title {
     @include font-resize(43px, 50px);
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     margin-left: -4px;
   }
 
@@ -81,7 +81,7 @@
     text-align: center;
 
     position: absolute;
-    top: 55px;
+    top: 53px;
     right: 0;
   }
 
@@ -96,7 +96,7 @@
     position: absolute;
 
     right: 0;
-    top: 150px;
+    top: 148px;
   }
 
   .main-week-product__image {
@@ -140,7 +140,7 @@
   }
 
   .main-week-product__description {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .main-week-product__image-container {
