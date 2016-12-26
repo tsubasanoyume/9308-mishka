@@ -33,7 +33,7 @@
   }
 }
 
-.main-nav__list-link__icon-container {
+.main-nav__icon-container {
     position: absolute;
 
     top: 23px;
@@ -45,7 +45,7 @@
     }
   }
 
-  .main-nav__list-link__icon {
+  .main-nav__icon {
     fill: $color-icons-nav;
   }
 
@@ -71,7 +71,7 @@
     padding: 28px 35px 35px;
   }
 
-  .main-nav__list-link__icon-container {
+  .main-nav__icon-container {
     top: 30px;
 
     &--toy {
