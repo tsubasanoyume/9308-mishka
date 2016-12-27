@@ -62,7 +62,7 @@ gulp.task("symbols", function () {
 });
 
 gulp.task("js", function() {
-  gulp.src("js/*.js")
+  gulp.src(["!picturefill.min.js","js/*.js"])
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js"));
@@ -76,6 +76,8 @@ gulp.task("copy", function() {
   return gulp.src([
       "fonts/**/*.{woff,woff2}",
       "img/**",
+      "css/normalize.min.css",
+      "js/picturefill.min.js",
       "*.html"
     ], {
       base: "."

@@ -133,8 +133,6 @@
   padding: 25px 0;
   margin-left: 45px;
 
-
-
   &:active {
     opacity: .3;
   }
@@ -198,6 +196,9 @@
     &--search {
       order: 0;
       width: 23px;
+      min-height: 25px;
+      padding-top: 32px;
+      padding-bottom: 34px;
 
       border-left: 1px solid $main-color-border;
       border-right: 1px solid $main-color-border;
@@ -260,8 +261,9 @@
     margin: 0;
     font-size: 0;
 
-    padding-top: 32px;
-    padding-bottom: 34px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 20px;
   }
 
   .menu-list__link--basket {
@@ -277,8 +279,8 @@
     left: -48px;
 
     &--search {
-      left: 4px;
-      margin-top: -10px;
+      top: 9px;
+      left: 2px;
     }
   }
 
@@ -423,7 +425,6 @@
 
     &--search {
       left: 0;
-      margin-top: -10px;
     }
   }
 
