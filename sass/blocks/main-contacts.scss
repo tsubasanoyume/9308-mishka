@@ -143,15 +143,9 @@
   .main-contacts {
     position: relative;
 
-    padding-top: 85px;
+    padding-top: 106px;
     padding-left: 175px;
     padding-bottom: 104px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    height: 460px;
   }
 
   .main-contacts__title {
@@ -159,7 +153,7 @@
 
     margin-bottom: 47px;
     margin-left: -3px;
-    margin-top: 70px;
+    margin-top: 50px;
 
     &:after {
 
@@ -202,10 +196,9 @@
     width: 525px;
     height: 455px;
 
-    align-self: flex-end;
-    order: 1;
-    margin-right: 0;
-    margin-bottom: 0;
+    position: absolute;
+    right: 50px;
+    top: 82px;
 
     background-image: url("../img/map-desktop@1x.jpg");
 
