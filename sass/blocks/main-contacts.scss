@@ -149,8 +149,9 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    max-height: 457px;
+    height: 460px;
   }
 
   .main-contacts__title {
@@ -204,6 +205,7 @@
     align-self: flex-end;
     order: 1;
     margin-right: 0;
+    margin-bottom: 0;
 
     background-image: url("../img/map-desktop@1x.jpg");
 
